@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <!-- Glow filters -->
+    <filter id="glow-green" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur1"/>
+      <feGaussianBlur stdDeviation="12" result="blur2"/>
+      <feGaussianBlur stdDeviation="24" result="blur3"/>
+      <feMerge>
+        <feMergeNode in="blur3"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-magenta" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur1"/>
+      <feGaussianBlur stdDeviation="12" result="blur2"/>
+      <feGaussianBlur stdDeviation="24" result="blur3"/>
+      <feMerge>
+        <feMergeNode in="blur3"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur1"/>
+      <feGaussianBlur stdDeviation="10" result="blur2"/>
+      <feGaussianBlur stdDeviation="20" result="blur3"/>
+      <feMerge>
+        <feMergeNode in="blur3"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="50%" stop-color="#0D1117"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="scanline-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ff88" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00ff88" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#00ff88" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff88"/>
+      <stop offset="30%" stop-color="#00ccff"/>
+      <stop offset="60%" stop-color="#ff00ff"/>
+      <stop offset="100%" stop-color="#00ff88"/>
+    </linearGradient>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00ff88" stroke-width="0.3" stroke-opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="320" fill="url(#bg-grad)"/>
+  <rect width="1200" height="320" fill="url(#grid)"/>
+
+  <!-- Scanlines -->
+  <rect width="1200" height="320" fill="url(#scanline-grad)">
+    <animate attributeName="y" from="-320" to="320" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Top border line with glow -->
+  <line x1="0" y1="0" x2="1200" y2="0" stroke="#00ff88" stroke-width="2" filter="url(#glow-green)" opacity="0.8"/>
+  <line x1="0" y1="318" x2="1200" y2="318" stroke="#00ff88" stroke-width="1" filter="url(#glow-green)" opacity="0.4"/>
+
+  <!-- Corner decorations -->
+  <path d="M 20 20 L 60 20 L 60 25 L 25 25 L 25 60 L 20 60 Z" fill="#00ff88" filter="url(#glow-green)" opacity="0.9"/>
+  <path d="M 1180 20 L 1140 20 L 1140 25 L 1175 25 L 1175 60 L 1180 60 Z" fill="#00ff88" filter="url(#glow-green)" opacity="0.9"/>
+  <path d="M 20 300 L 60 300 L 60 295 L 25 295 L 25 260 L 20 260 Z" fill="#ff00ff" filter="url(#glow-magenta)" opacity="0.9"/>
+  <path d="M 1180 300 L 1140 300 L 1140 295 L 1175 295 L 1175 260 L 1180 260 Z" fill="#ff00ff" filter="url(#glow-magenta)" opacity="0.9"/>
+
+  <!-- Terminal prefix -->
+  <text x="60" y="80" font-family="'Courier New', monospace" font-size="16" fill="#00ff88" opacity="0.7" filter="url(#glow-green)">
+    > system.boot --user=spinner-bot
+  </text>
+  <text x="60" y="102" font-family="'Courier New', monospace" font-size="14" fill="#00ccff" opacity="0.6">
+    [INFO] Initializing profile matrix...
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Main title SPINNER-BOT -->
+  <text x="600" y="175" font-family="'Segoe UI', 'Arial Black', sans-serif" font-size="72" font-weight="900" fill="url(#title-grad)" text-anchor="middle" letter-spacing="8" filter="url(#glow-green)">
+    SPINNER-BOT
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Chinese name -->
+  <text x="600" y="215" font-family="'Microsoft YaHei', 'SimHei', sans-serif" font-size="32" font-weight="700" fill="#ff00ff" text-anchor="middle" letter-spacing="12" filter="url(#glow-magenta)">
+    浪 兮
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="250" font-family="'Courier New', monospace" font-size="15" fill="#00ccff" text-anchor="middle" opacity="0.8" filter="url(#glow-cyan)">
+    ZHANG RUIHAN / 张锐寒
+  </text>
+
+  <!-- Blinking cursor -->
+  <rect x="785" y="155" width="12" height="48" fill="#00ff88" filter="url(#glow-green)">
+    <animate attributeName="opacity" values="1;1;0;0;1;1;0;0" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Terminal bottom info -->
+  <text x="60" y="295" font-family="'Courier New', monospace" font-size="12" fill="#00ff88" opacity="0.5">
+    [SYS] NODE: HHU/DIG-Lab | STATUS: ONLINE | UPTIME: ∞
+  </text>
+
+  <!-- Floating particles -->
+  <circle cx="100" cy="150" r="2" fill="#00ff88" opacity="0.6">
+    <animate attributeName="cy" values="150;140;150" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1100" cy="120" r="1.5" fill="#ff00ff" opacity="0.5">
+    <animate attributeName="cy" values="120;110;120" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="100" r="1.5" fill="#00ccff" opacity="0.5">
+    <animate attributeName="cy" values="100;90;100" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.15;0.5" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="130" r="1" fill="#ff6600" opacity="0.6">
+    <animate attributeName="cy" values="130;120;130" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
