@@ -1,11 +1,3 @@
-<!--
-  ╔══════════════════════════════════════════════════════════════╗
-  ║  spinner-bot / 浪兮  —  GitHub Profile README v1            ║
-  ║  Theme: Cyberpunk Neon Terminal / 赛博朋克霓虹终端          ║
-  ║  Language: EN first, CN second  /  英语在前，中文在后        ║
-  ╚══════════════════════════════════════════════════════════════╝
--->
-
 <p align="center">
   <img width="100%" src="./assets/neon-header.svg" alt="spinner-bot neon command center" />
 </p>
@@ -161,10 +153,3 @@
 <p align="center">
   <img width="100%" src="./assets/footer-rift.svg" alt="Footer rift" />
 </p>
-
-<!--
-  ╔══════════════════════════════════════════════════════════╗
-  ║  END OF TRANSMISSION                                     ║
-  ║  spinner-bot // 浪兮 // DIG Lab @ HHU                   ║
-  ╚══════════════════════════════════════════════════════════╝
--->
