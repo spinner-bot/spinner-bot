@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- ═══════════ TYPING ANIMATION ═══════════ -->
-<img src="https://raw.githubusercontent.com/spinner-bot/spinner-bot/output/typing-animation.gif" alt="typing animation" width="800" />
+<img src="https://raw.githubusercontent.com/spinner-bot/spinner-bot/main/assets/typing-animation.gif" alt="typing animation" width="800" />
 
 <br/>
 <br/>
