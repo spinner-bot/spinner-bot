@@ -1,9 +1,36 @@
 <div align="center">
 
-<!-- ═══════════ TYPING ANIMATION ═══════════ -->
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1500&color=00C3FF&center=true&vCenter=true&width=800&lines=Exploring+more+possibilities+in+the+AI+era.;%E3%80%8C%E6%8E%A2%E7%B4%A2AI%E6%97%B6%E4%BB%A3%E7%9A%84%E6%9B%B4%E5%A4%9A%E5%8F%AF%E8%83%BD%E3%80%8D" alt="typing animation" />
-</a>
+<!-- ═══════════ TYPING SVG ═══════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 70" width="100%">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="10%" stop-color="#F0FF00"/>
+      <stop offset="100%" stop-color="#58CFFB"/>
+    </linearGradient>
+  </defs>
+
+  <!-- EN line + cursor -->
+  <g>
+    <text x="450" y="30" font-family="'Fira Code','Courier New',monospace" font-size="18" font-weight="600" fill="url(#grad)" text-anchor="middle">
+      Exploring more possibilities in the AI era.
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.38;0.43;0.88;0.91;1" dur="8s" repeatCount="indefinite"/>
+    </text>
+    <rect x="700" y="8" width="3" height="28" rx="1.5" fill="url(#grad)">
+      <animate attributeName="opacity" values="0;0;1;0;1;0;0" keyTimes="0;0.38;0.39;0.5;0.51;0.88;0.91" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- CN line + cursor -->
+  <g>
+    <text x="450" y="30" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="20" font-weight="700" fill="url(#grad)" text-anchor="middle">
+      「探索AI时代的更多可能」
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.43;0.48;0.85;0.88;1" dur="8s" repeatCount="indefinite"/>
+    </text>
+    <rect x="590" y="7" width="3" height="30" rx="1.5" fill="url(#grad)">
+      <animate attributeName="opacity" values="0;0;1;0;1;0;0" keyTimes="0;0.43;0.44;0.5;0.51;0.85;0.88" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
 
 <br/>
 <br/>
