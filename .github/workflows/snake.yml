@@ -1,15 +1,16 @@
 name: Generate Snake Animation
 
 on:
-  # 每天自动运行一次（UTC 时间）
   schedule:
     - cron: "0 0 * * *"
-  # 也允许手动触发
   workflow_dispatch:
-  # push 时也触发（可选，方便调试）
   push:
     branches:
       - main
+
+# 关键：授予写入权限
+permissions:
+  contents: write
 
 jobs:
   generate:
@@ -17,7 +18,9 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      # 步骤1：生成蛇形图 SVG
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Generate snake SVG
         uses: Platane/snk/svg-only@v3
         with:
@@ -26,11 +29,13 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      # 步骤2：将生成的 SVG 推送到 output 分支
-      - name: Push snake SVGs to output branch
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push SVGs to output branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git checkout --orphan output 2>/dev/null || git checkout output
+          git rm -rf . 2>/dev/null || true
+          cp dist/*.svg .
+          git add *.svg
+          git commit -m "Update snake animation [skip ci]" || true
+          git push origin output --force
