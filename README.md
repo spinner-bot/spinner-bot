@@ -2,7 +2,7 @@
 
 <!-- ═══════════ TYPING ANIMATION ═══════════ -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1500&color=00FF88&center=true&vCenter=true&width=800&lines=Exploring+more+possibilities+in+the+AI+era.;%E3%80%8C%E6%8E%A2%E7%B4%A2AI%E6%97%B6%E4%BB%A3%E7%9A%84%E6%9B%B4%E5%A4%9A%E5%8F%AF%E8%83%BD%E3%80%8D" alt="typing animation" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1500&color=00C3FF&center=true&vCenter=true&width=800&lines=Exploring+more+possibilities+in+the+AI+era.;%E3%80%8C%E6%8E%A2%E7%B4%A2AI%E6%97%B6%E4%BB%A3%E7%9A%84%E6%9B%B4%E5%A4%9A%E5%8F%AF%E8%83%BD%E3%80%8D" alt="typing animation" />
 </a>
 
 <br/>
