@@ -2,7 +2,9 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    # 每小时第 17 分钟运行（UTC 时间；北京时间同样为每小时 :17）
+    # GitHub 高峰期可能延迟数分钟~数十分钟，属正常现象
+    - cron: "17 * * * *"
   workflow_dispatch:
   push:
     branches:
@@ -23,6 +25,10 @@ jobs:
 
       - name: Generate snake SVG
         uses: Platane/snk/svg-only@v3
+        env:
+          # 用本人 PAT（read:user）查询，可纳入私有仓库贡献；
+          # 未配置该 secret 时为空字符串，snk 自动回退为匿名（仅公开贡献）
+          GITHUB_TOKEN: ${{ secrets.SNK_TOKEN }}
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
