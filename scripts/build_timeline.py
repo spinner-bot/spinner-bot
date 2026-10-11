@@ -1,4 +1,4 @@
-"""Build the two self-contained SVG layouts for the bilingual research timeline."""
+"""Build continuous timeline and Current Focus SVG layouts."""
 
 from dataclasses import dataclass
 from pathlib import Path
@@ -13,7 +13,6 @@ ASSETS = ROOT / "assets"
 @dataclass(frozen=True)
 class Event:
     season_en: str
-    season_zh: str
     year: str
     title_en: str
     title_zh: str
@@ -23,29 +22,37 @@ class Event:
 
 EVENTS = (
     Event(
-        "AUTUMN", "秋", "2025",
+        "AUTUMN", "2025",
         "Programming Foundations & First Builds", "编程基础与工程起步",
         "Began undergraduate study at Hohai University, establishing a foundation in computing and intelligent technologies. C/C++ programming and team software projects developed my ability to translate problems into working implementations.",
         "进入河海大学，开启计算机与智能技术领域的系统学习。通过 C/C++ 编程和团队软件项目建立实现基础，逐步形成从问题分析到代码落地的工程思维。",
     ),
     Event(
-        "SPRING", "春", "2026",
+        "SPRING", "2026",
         "Machine Learning & Research Practice", "机器学习与研究实践",
         "Developed a broad foundation in machine learning and deep learning through model implementation and experimentation. Joined a research team to investigate specific machine learning algorithm optimization problems, extending my focus from learning algorithms to research questions, methodological design, and empirical analysis.",
         "系统拓展机器学习与深度学习知识，通过模型实现和实验建立对核心方法的理解。进入研究团队，开始探索具体的机器学习算法优化问题，将关注点从算法学习推进到研究问题、方法设计与实证分析。",
     ),
     Event(
-        "SUMMER", "夏", "2026",
+        "SUMMER", "2026",
         "Multimodal Intelligence & Policy Distillation", "多模态智能与策略蒸馏",
         "Extended my research focus to multimodal large language models and Online Policy Distillation (OPD). With access to advanced computing resources, I independently pursued Vision-OPD reproduction and follow-up experiments, testing methodological hypotheses, analyzing performance gaps, and investigating the possibilities and limitations of model capability transfer.",
         "将研究重心拓展至多模态大语言模型与在线策略蒸馏（Online Policy Distillation, OPD）。借助高水平计算资源，独立开展 Vision-OPD 复现与后续方案探索，通过实验检验方法假设、分析性能差距，并进一步理解模型能力迁移的技术路径与局限。",
     ),
     Event(
-        "AUTUMN", "秋", "2026",
+        "AUTUMN", "2026",
         "Model Architectures & Emerging Directions", "模型架构与前沿探索",
         "Expanded into tabular learning and alternative model architectures, exploring TabPFN, gradient-boosted trees, and FT-Transformer, while investigating the mechanisms and potential applications of emerging approaches such as JEV. Continuing to identify promising research questions and technical opportunities.",
         "将探索范围延伸至表格学习与新型模型架构，研究 TabPFN、梯度提升树和 FT-Transformer 等方法，并关注 JEV 等新兴方向的机制与应用潜力。持续拓展技术视野，寻找具有研究价值的问题与切入点。",
     ),
+)
+
+
+FOCUS = (
+    ("Multimodal Intelligence & Policy Distillation", "多模态智能与策略蒸馏"),
+    ("Tabular Learning & Model Architectures", "表格学习与模型架构"),
+    ("Model Capability Transfer & Learning Mechanisms", "模型能力迁移与学习机制"),
+    ("AI-Driven Software Engineering & Open-Source Building", "AI 驱动的软件工程与开源构建"),
 )
 
 
@@ -135,7 +142,6 @@ def card(event: Event, x: int, y: int, width: int, mobile: bool) -> tuple[str, i
         f'<rect class="panel" x="{x}" y="{y}" width="{width}" height="{height}" rx="16"/>',
         f'<rect x="{x + pad}" y="{y + 24}" width="3" height="20" rx="1.5" fill="url(#accent)"/>',
         text(x + pad + 14, date_y, f"{event.season_en} {event.year}", "date"),
-        text(x + width - pad, date_y, event.season_zh, "date-zh", 'text-anchor="end"'),
         f'<path class="hairline" d="M{x + pad} {date_y + 12}H{x + width - pad}"/>',
     ]
     out += lines_at(x + pad, en_title_y, title_en, "title-en", title_step)
@@ -160,18 +166,21 @@ def shell(width: int, height: int, mobile: bool, content: str) -> str:
       .node-ring { fill: #0a2630; stroke: #a5ffec; stroke-width: 3; }
       .node-core { fill: #8ff8e1; }
       .date { fill: #76efd8; font-size: DATE_SIZEpx; font-weight: 700; letter-spacing: .12em; }
-      .date-zh { fill: #9ad9dd; font-size: DATE_ZH_SIZEpx; font-weight: 650; }
       .title-en { fill: #f0fcfb; font-size: TITLE_EN_SIZEpx; font-weight: 700; }
       .title-zh { fill: #c9e6e5; font-size: TITLE_ZH_SIZEpx; font-weight: 650; }
       .body-en { fill: #b7cacc; font-size: BODY_EN_SIZEpx; }
       .body-zh { fill: #b7cacc; font-size: BODY_ZH_SIZEpx; }
       .year { fill: #e8fffa; font-size: YEAR_SIZEpx; font-weight: 760; letter-spacing: .09em; }
+      .focus-heading { fill: #effffc; font-size: FOCUS_HEADING_SIZEpx; font-weight: 760; letter-spacing: .02em; }
+      .focus-row { fill: #0b2029; stroke: #2a4850; stroke-width: 1; }
+      .focus-en { fill: #e5f7f4; font-size: FOCUS_EN_SIZEpx; font-weight: 650; }
+      .focus-zh { fill: #a9c7c8; font-size: FOCUS_ZH_SIZEpx; }
     </style>"""
-    sizes = (11, 12, 15, 16, 14, 14, 14, 22) if mobile else (13, 14, 19, 19, 17, 17, 17, 26)
-    for key, size in zip(("DATE_SIZE", "DATE_ZH_SIZE", "TITLE_EN_SIZE", "TITLE_ZH_SIZE", "BODY_EN_SIZE", "BODY_ZH_SIZE", "YEAR_SIZE", "TRACK_SIZE"), sizes):
+    sizes = (11, 15, 16, 14, 14, 14, 22, 19, 15, 14) if mobile else (13, 19, 19, 17, 17, 17, 26, 25, 20, 18)
+    for key, size in zip(("DATE_SIZE", "TITLE_EN_SIZE", "TITLE_ZH_SIZE", "BODY_EN_SIZE", "BODY_ZH_SIZE", "YEAR_SIZE", "TRACK_SIZE", "FOCUS_HEADING_SIZE", "FOCUS_EN_SIZE", "FOCUS_ZH_SIZE"), sizes):
         styles = styles.replace(key, str(size))
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" role="img" aria-labelledby="timeline-desc">
-  <title id="timeline-desc">Bilingual research timeline, 2025 to 2026 / 2025 至 2026 年研究时间线</title>
+  <title id="timeline-desc">Bilingual research timeline and current focus / 研究时间线与当前关注</title>
   {styles}
   <defs>
     <linearGradient id="background" x2="1" y2="1"><stop stop-color="#061117"/><stop offset=".62" stop-color="#081b23"/><stop offset="1" stop-color="#0b222d"/></linearGradient>
@@ -197,35 +206,94 @@ def year_marker(x: int, y: int, width: int = 110, mobile: bool = False) -> str:
     ))
 
 
+def ellipsis(x: int, y: int, mobile: bool) -> str:
+    steps = (24, 20, 20) if mobile else (32, 27, 27)
+    radii = (6, 5, 4) if mobile else (8, 7, 6)
+    opacity = (1, .78, .56)
+    dots = []
+    current = y
+    for step, radius, alpha in zip(steps, radii, opacity):
+        current += step
+        dots.append(f'<circle cx="{x}" cy="{current}" r="{radius}" fill="#91f5df" opacity="{alpha}"/>')
+    return "\n".join(dots)
+
+
+def focus_section(start_y: int, mobile: bool) -> tuple[str, int]:
+    center = 195 if mobile else 600
+    heading_y = start_y + (27 if mobile else 31)
+    underline_half = 88 if mobile else 126
+    output = [
+        text(center, heading_y, "CURRENT FOCUS 当前关注", "focus-heading", 'text-anchor="middle"'),
+        f'<path d="M{center - underline_half} {heading_y + 19}H{center + underline_half}" stroke="#31535b" stroke-width="1"/>',
+        f'<path d="M{center - 35} {heading_y + 19}H{center + 35}" stroke="url(#accent)" stroke-width="2"/>',
+    ]
+
+    row_y = start_y + (74 if mobile else 81)
+    row_x, row_width = (33, 324) if mobile else (155, 890)
+    for english, chinese in FOCUS:
+        if mobile:
+            en_lines = wrap(english, row_width - 64, 15)
+            zh_lines = wrap(chinese, row_width - 64, 14, True)
+            en_y = row_y + 34
+            zh_y = en_y + len(en_lines) * 22 + 12
+            row_height = zh_y - row_y + (len(zh_lines) - 1) * 24 + 27
+            text_x = row_x + 38
+            output.append(f'<rect class="focus-row" x="{row_x}" y="{row_y}" width="{row_width}" height="{row_height}" rx="14"/>')
+            output.append(f'<rect x="{row_x + 19}" y="{row_y + 22}" width="3" height="{row_height - 44}" rx="1.5" fill="url(#accent)"/>')
+            output += lines_at(text_x, en_y, en_lines, "focus-en", 22)
+            output += lines_at(text_x, zh_y, zh_lines, "focus-zh", 24)
+            row_y += row_height + 13
+        else:
+            row_height = 100
+            text_x = row_x + 40
+            output.extend((
+                f'<rect class="focus-row" x="{row_x}" y="{row_y}" width="{row_width}" height="{row_height}" rx="14"/>',
+                f'<rect x="{row_x + 21}" y="{row_y + 23}" width="3" height="54" rx="1.5" fill="url(#accent)"/>',
+                text(text_x, row_y + 42, english, "focus-en"),
+                text(text_x, row_y + 73, chinese, "focus-zh"),
+            ))
+            row_y += row_height + 15
+    return "\n".join(output), row_y + 26
+
+
 def desktop() -> str:
-    left_x, right_x, card_width = 86, 314, 800
+    card_x, card_width = 112, 976
+    left_track, right_track = 56, 1144
     first_y = 68
-    first, first_height = card(EVENTS[0], left_x, first_y, card_width, False)
+    first, first_height = card(EVENTS[0], card_x, first_y, card_width, False)
     crossing_y = first_y + first_height + 76
     pieces = [first]
-    nodes = [(50, first_y + 38, left_x)]
+    nodes = [(left_track, first_y + 38, card_x)]
     current_y = crossing_y + 76
     for event in EVENTS[1:]:
-        drawing, height = card(event, right_x, current_y, card_width, False)
+        drawing, height = card(event, card_x, current_y, card_width, False)
         pieces.append(drawing)
-        nodes.append((1150, current_y + 38, right_x + card_width))
+        nodes.append((right_track, current_y + 38, card_x + card_width))
         current_y += height + 30
-    total_height = current_y + 12
-    route = f"M50 28V{crossing_y - 34} Q50 {crossing_y} 84 {crossing_y} H1116 Q1150 {crossing_y} 1150 {crossing_y + 34} V{total_height - 29}"
+    tail_start = current_y + 25
+    tip_y = tail_start + 556
+    focus_drawing, total_height = focus_section(tail_start + 692, False)
+    route = (
+        f"M{left_track} 28V{crossing_y - 120} Q{left_track} {crossing_y} 176 {crossing_y} "
+        f"H1024 Q{right_track} {crossing_y} {right_track} {crossing_y + 120} "
+        f"V{tail_start} Q{right_track} {tail_start + 90} 1066 {tail_start + 135} "
+        f"L678 {tail_start + 359} Q600 {tail_start + 404} 600 {tail_start + 494} V{tip_y}"
+    )
     tracks = [f'<path class="track" d="{route}"/>', f'<path class="track-core" d="{route}"/>']
-    for index, (node_x, node_y, card_edge) in enumerate(nodes):
+    for node_x, node_y, card_edge in nodes:
         tracks.extend((
             f'<path class="hairline" d="M{min(node_x, card_edge)} {node_y}H{max(node_x, card_edge)}"/>',
             f'<circle class="node-halo" cx="{node_x}" cy="{node_y}" r="26"/>',
             f'<circle class="node-ring" cx="{node_x}" cy="{node_y}" r="19"/>',
             f'<circle class="node-core" cx="{node_x}" cy="{node_y}" r="6"/>',
         ))
-    content = "\n".join(tracks + pieces + [year_marker(600, crossing_y, 96)])
+    content = "\n".join(tracks + pieces + [year_marker(600, crossing_y, 96), ellipsis(600, tip_y, False), focus_drawing])
     return shell(1200, total_height, False, content)
 
 
 def mobile() -> str:
-    card_width = 323
+    card_x, card_width = 54, 282
+    left_track, right_track = 27, 363
     current_y = 44
     pieces = []
     nodes = []
@@ -234,13 +302,19 @@ def mobile() -> str:
         if index == 1:
             crossing_y = current_y + 36
             current_y = crossing_y + 60
-        x = 44 if index == 0 else 23
-        drawing, height = card(event, x, current_y, card_width, True)
+        drawing, height = card(event, card_x, current_y, card_width, True)
         pieces.append(drawing)
-        nodes.append((22 if index == 0 else 368, current_y + 32, x if index == 0 else x + card_width))
+        nodes.append((left_track if index == 0 else right_track, current_y + 32, card_x if index == 0 else card_x + card_width))
         current_y += height + 26
-    total_height = current_y + 12
-    route = f"M22 24V{crossing_y - 22} Q22 {crossing_y} 44 {crossing_y} H346 Q368 {crossing_y} 368 {crossing_y + 22} V{total_height - 29}"
+    tail_start = current_y + 24
+    tip_y = tail_start + 274
+    focus_drawing, total_height = focus_section(tail_start + 380, True)
+    route = (
+        f"M{left_track} 24V{crossing_y - 70} Q{left_track} {crossing_y} 97 {crossing_y} "
+        f"H293 Q{right_track} {crossing_y} {right_track} {crossing_y + 70} "
+        f"V{tail_start} Q{right_track} {tail_start + 58} 315 {tail_start + 86} "
+        f"L243 {tail_start + 128} Q195 {tail_start + 156} 195 {tail_start + 214} V{tip_y}"
+    )
     tracks = [f'<path class="track" d="{route}"/>', f'<path class="track-core" d="{route}"/>']
     for node_x, node_y, card_edge in nodes:
         tracks.extend((
@@ -249,7 +323,7 @@ def mobile() -> str:
             f'<circle class="node-ring" cx="{node_x}" cy="{node_y}" r="16"/>',
             f'<circle class="node-core" cx="{node_x}" cy="{node_y}" r="5"/>',
         ))
-    content = "\n".join(tracks + pieces + [year_marker(195, crossing_y, 88, True)])
+    content = "\n".join(tracks + pieces + [year_marker(195, crossing_y, 88, True), ellipsis(195, tip_y, True), focus_drawing])
     return shell(390, total_height, True, content)
 
 

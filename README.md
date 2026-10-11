@@ -17,8 +17,8 @@
 <br/>
 
 <picture>
-  <source media="(max-width: 640px)" srcset="assets/timeline-mobile.svg?v=2">
-  <img src="assets/timeline.svg?v=2" alt="Research timeline / 研究时间线: Autumn 2025 秋, Programming Foundations &amp; First Builds / 编程基础与工程起步; Spring 2026 春, Machine Learning &amp; Research Practice / 机器学习与研究实践; Summer 2026 夏, Multimodal Intelligence &amp; Policy Distillation / 多模态智能与策略蒸馏; Autumn 2026 秋, Model Architectures &amp; Emerging Directions / 模型架构与前沿探索." width="100%" />
+  <source media="(max-width: 640px)" srcset="assets/timeline-mobile.svg?v=3">
+  <img src="assets/timeline.svg?v=3" alt="Research timeline and Current Focus / 研究时间线与当前关注: Autumn 2025, Programming Foundations &amp; First Builds / 编程基础与工程起步; Spring 2026, Machine Learning &amp; Research Practice / 机器学习与研究实践; Summer 2026, Multimodal Intelligence &amp; Policy Distillation / 多模态智能与策略蒸馏; Autumn 2026, Model Architectures &amp; Emerging Directions / 模型架构与前沿探索. Current Focus: Multimodal Intelligence &amp; Policy Distillation / 多模态智能与策略蒸馏; Tabular Learning &amp; Model Architectures / 表格学习与模型架构; Model Capability Transfer &amp; Learning Mechanisms / 模型能力迁移与学习机制; AI-Driven Software Engineering &amp; Open-Source Building / AI 驱动的软件工程与开源构建." width="100%" />
 </picture>
 
 <!-- Temporarily hidden; preserved for later reuse.
