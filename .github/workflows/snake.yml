@@ -35,6 +35,20 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
+      - name: Add a dark canvas to the dark-mode SVG
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          svg_path = Path("dist/github-contribution-grid-snake-dark.svg")
+          svg = svg_path.read_text(encoding="utf-8")
+          root_end = svg.find(">")
+          if not svg.lstrip().startswith("<svg") or root_end < 0:
+              raise SystemExit("Generated snake asset is not a valid SVG document")
+          background = '<rect width="100%" height="100%" rx="16" fill="#061117"/>'
+          svg_path.write_text(svg[:root_end + 1] + background + svg[root_end + 1:], encoding="utf-8")
+          PY
+
       - name: Push SVGs to output branch
         run: |
           git config user.name 'github-actions[bot]'
