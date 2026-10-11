@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">ZHANG RUIHAN · spinner-bot — Digital Identity</title>
+  <desc id="hero-desc">Animated personal portfolio card. The name changes between ZHANG RUIHAN and 张锐寒 with the language; spinner-bot remains visible. A precise, slowly moving computational network represents artificial intelligence.</desc>
+
+  <style>
+    :root {
+      --bg: #071219;
+      --bg-deep: #061016;
+      --bg-raised: #112b35;
+      --line: #29434c;
+      --line-soft: #18313a;
+      --white: #f1fbfa;
+      --muted: #92adb2;
+      --mint: #7ce7d4;
+      --blue: #72bded;
+      --violet: #888eea;
+      --aura: #174c51;
+      --aura-blue: #172c55;
+    }
+    text { font-family: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .eyebrow { font-size: 16px; font-weight: 700; letter-spacing: .16em; fill: var(--mint); }
+    .eyebrow-zh { font-size: 17px; font-weight: 600; letter-spacing: .21em; }
+    .name { font-size: 57px; font-weight: 780; letter-spacing: -.055em; fill: var(--white); }
+    .name-zh { font-size: 62px; font-weight: 700; letter-spacing: .09em; }
+    .handle { font-size: 20px; font-weight: 500; letter-spacing: .07em; fill: var(--muted); }
+    .statement { font-size: 22px; font-weight: 400; fill: var(--white); }
+    .statement-zh { font-size: 23px; letter-spacing: .035em; }
+    .footer-copy { font-size: 15px; font-weight: 700; letter-spacing: .15em; fill: var(--muted); }
+    .footer-zh { font-size: 16px; font-weight: 600; letter-spacing: .24em; }
+    .ring-outer, .ring-inner, .network, .core, .pulse, .data-ring, .signal, .spark { transform-box: fill-box; transform-origin: center; }
+    .ring-outer { animation: spin 30s linear infinite; }
+    .ring-inner { animation: spin 22s linear infinite reverse; }
+    .network { animation: breathe 7s ease-in-out infinite; }
+    .core { animation: core-breathe 7s ease-in-out infinite; }
+    .pulse { animation: pulse 7s ease-in-out infinite; }
+    .data-ring { animation: spin 48s linear infinite; }
+    .signal { animation: spin 8s linear infinite; }
+    .spark { animation: spark 4s ease-in-out infinite; }
+    .copy-en { animation: language-en 12s ease-in-out infinite; }
+    .copy-zh { opacity: 0; animation: language-zh 12s ease-in-out infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes breathe { 50% { opacity: .62; } }
+    @keyframes core-breathe { 50% { opacity: .72; transform: scale(.95); } }
+    @keyframes pulse { 50% { opacity: .42; transform: scale(1.1); } }
+    @keyframes spark { 50% { opacity: .25; } }
+    @keyframes language-en { 0%, 40% { opacity: 1; } 49%, 91% { opacity: 0; } 100% { opacity: 1; } }
+    @keyframes language-zh { 0%, 40% { opacity: 0; } 49%, 91% { opacity: 1; } 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      .ring-outer, .ring-inner, .network, .core, .pulse, .data-ring, .signal, .spark, .copy-en, .copy-zh { animation: none; }
+      .copy-en { opacity: 1; }
+      .copy-zh { opacity: 0; }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" style="stop-color:var(--bg-deep)"/>
+      <stop offset=".55" style="stop-color:var(--bg)"/>
+      <stop offset="1" style="stop-color:var(--bg-raised)"/>
+    </linearGradient>
+    <radialGradient id="aura-mint">
+      <stop offset="0" style="stop-color:var(--aura);stop-opacity:.66"/>
+      <stop offset="1" style="stop-color:var(--aura);stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="aura-violet">
+      <stop offset="0" style="stop-color:var(--aura-blue);stop-opacity:.55"/>
+      <stop offset="1" style="stop-color:var(--aura-blue);stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" style="stop-color:var(--mint)"/>
+      <stop offset=".62" style="stop-color:var(--blue)"/>
+      <stop offset="1" style="stop-color:var(--violet)"/>
+    </linearGradient>
+    <radialGradient id="center-light">
+      <stop offset="0" style="stop-color:var(--mint);stop-opacity:.37"/>
+      <stop offset="1" style="stop-color:var(--mint);stop-opacity:0"/>
+    </radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="var(--line-soft)" stroke-width=".8"/>
+    </pattern>
+    <linearGradient id="grid-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="white" stop-opacity=".24"/>
+      <stop offset=".42" stop-color="white" stop-opacity=".06"/>
+      <stop offset="1" stop-color="white" stop-opacity=".75"/>
+    </linearGradient>
+    <mask id="grid-mask"><rect width="1200" height="440" fill="url(#grid-fade)"/></mask>
+    <clipPath id="card-clip"><rect width="1200" height="440" rx="20"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#card-clip)">
+    <rect width="1200" height="440" fill="url(#ground)"/>
+    <ellipse cx="916" cy="211" rx="343" ry="283" fill="url(#aura-mint)"/>
+    <ellipse cx="1140" cy="389" rx="298" ry="220" fill="url(#aura-violet)"/>
+    <rect width="1200" height="440" fill="url(#grid)" mask="url(#grid-mask)"/>
+    <path d="M742 0V440M782 0V440" stroke="var(--line-soft)" stroke-width="1" opacity=".48"/>
+    <path d="M76 354H666" stroke="var(--line)" stroke-width="1"/>
+    <path d="M76 354h88" stroke="url(#accent)" stroke-width="2"/>
+
+    <!-- The handle stays fixed; the name follows the language state. -->
+    <rect x="76" y="228" width="3" height="18" rx="1.5" fill="var(--mint)"/>
+    <text class="handle" x="94" y="245">spinner-bot</text>
+
+    <!-- Each language has its own positions, and all three regions switch together. -->
+    <g class="copy-en">
+      <text class="eyebrow" x="76" y="72">DIGITAL IDENTITY · PERSONAL PORTFOLIO</text>
+      <text class="name" x="76" y="205">ZHANG RUIHAN</text>
+      <text class="statement" x="76" y="310">Exploring more possibilities in the AI era.</text>
+      <text class="footer-copy" x="76" y="395">KNOWLEDGE · RESEARCH · DEVELOPMENT</text>
+    </g>
+    <g class="copy-zh">
+      <text class="eyebrow eyebrow-zh" x="76" y="72">数字身份 · 个人作品集</text>
+      <text class="name name-zh" x="76" y="205">张锐寒</text>
+      <text class="statement statement-zh" x="76" y="310">探索 AI 时代的更多可能</text>
+      <text class="footer-copy footer-zh" x="76" y="395">知识 · 研究 · 开发</text>
+    </g>
+    <path d="M76 86h26" stroke="url(#accent)" stroke-width="2"/>
+
+    <!-- Computational field: radial coordinates, orbiting marks, and a connected AI graph. -->
+    <g transform="translate(953 213)">
+      <circle r="172" fill="none" stroke="var(--line-soft)" stroke-width="1"/>
+      <circle r="153" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="1 9" opacity=".85"/>
+      <circle r="128" fill="none" stroke="var(--line)" stroke-width="1" opacity=".72"/>
+      <circle r="103" fill="none" stroke="var(--line-soft)" stroke-width="1"/>
+      <path d="M-178 0H178M0-178V178" stroke="var(--line-soft)" stroke-width="1" opacity=".65"/>
+      <path d="M-160-48h15m-15 96h15M145-48h15M145 48h15" stroke="var(--line)" stroke-width="1"/>
+
+      <g class="data-ring">
+        <path d="M-110-110a156 156 0 0 1 220 0M110 110a156 156 0 0 1-220 0" fill="none" stroke="var(--blue)" stroke-width="1.5" opacity=".45"/>
+        <circle cx="-110" cy="-110" r="2.5" fill="var(--blue)"/>
+        <circle cx="110" cy="110" r="2.5" fill="var(--blue)"/>
+      </g>
+      <g class="ring-outer">
+        <circle r="140" fill="none" stroke="url(#accent)" stroke-width="1.5" stroke-dasharray="124 34 24 257 75 365" opacity=".9"/>
+        <circle cx="140" cy="0" r="3" fill="var(--mint)"/>
+      </g>
+      <g class="ring-inner">
+        <circle r="112" fill="none" stroke="var(--blue)" stroke-width="1" stroke-dasharray="26 13 62 16 8 41" opacity=".68"/>
+      </g>
+      <g class="signal">
+        <circle cx="0" cy="-128" r="6" fill="var(--mint)" opacity=".13"/>
+        <circle cx="0" cy="-128" r="2.6" fill="var(--mint)"/>
+      </g>
+
+      <!-- Neural graph with four linked layers, keeping nodes large enough at README scale. -->
+      <g class="network" fill="none" stroke="url(#accent)" stroke-width="1.3" opacity=".82">
+        <path d="M-81-51-39-85 24-78 78-35 79 38 27 82-39 75-84 23Z"/>
+        <path d="M-81-51 0-33 78-35M-39-85 0-33 24-78M-84 23 0-33 79 38M-39 75 0 31 27 82M79 38 0 31-84 23M0-33 0 31M24-78 0 31M-39 75 0-33" opacity=".76"/>
+        <path d="M-81-51-112-28M-84 23-107 57M-39-85-25-110M24-78 62-92M78-35 111-19M79 38 105 68M27 82 20 110M-39 75-70 100" opacity=".45"/>
+      </g>
+      <g fill="var(--bg)" stroke="var(--mint)" stroke-width="1.5">
+        <circle cx="-81" cy="-51" r="5"/><circle cx="-39" cy="-85" r="4"/>
+        <circle cx="24" cy="-78" r="5"/><circle cx="78" cy="-35" r="4"/>
+        <circle cx="79" cy="38" r="5"/><circle cx="27" cy="82" r="4"/>
+        <circle cx="-39" cy="75" r="5"/><circle cx="-84" cy="23" r="4"/>
+      </g>
+      <g fill="var(--blue)">
+        <circle cx="-112" cy="-28" r="2"/><circle cx="-107" cy="57" r="2"/>
+        <circle cx="-25" cy="-110" r="2"/><circle cx="62" cy="-92" r="2"/>
+        <circle cx="111" cy="-19" r="2"/><circle cx="105" cy="68" r="2"/>
+        <circle cx="20" cy="110" r="2"/><circle cx="-70" cy="100" r="2"/>
+      </g>
+      <circle class="pulse" r="58" fill="url(#center-light)"/>
+      <g class="core">
+        <path d="M0-28 25-14 25 14 0 28-25 14-25-14Z" fill="var(--bg-raised)" stroke="url(#accent)" stroke-width="2"/>
+        <path d="M0-28V28M-25-14 25 14M25-14-25 14" stroke="var(--blue)" stroke-width="1" opacity=".7"/>
+        <circle r="7" fill="var(--mint)"/>
+        <circle r="2.4" fill="var(--white)"/>
+      </g>
+      <circle class="spark" cx="-39" cy="-85" r="5" fill="var(--mint)" opacity=".55"/>
+      <circle class="spark" cx="79" cy="38" r="5" fill="var(--blue)" opacity=".55" style="animation-delay:-2s"/>
+    </g>
+
+    <path d="M76 417h1048" stroke="var(--line-soft)" stroke-width="1"/>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="439" rx="19.5" fill="none" stroke="var(--line)" stroke-width="1"/>
+</svg>

@@ -1,7 +1,7 @@
 <div align="center">
 
-<!-- ═══════════ TYPING ANIMATION ═══════════ -->
-<img src="https://raw.githubusercontent.com/spinner-bot/spinner-bot/main/assets/typing-animation.gif" alt="typing animation" width="800" />
+<!-- ═══════════ ANIMATED PERSONAL COVER ═══════════ -->
+<img src="assets/hero.svg" alt="ZHANG RUIHAN / 张锐寒 · spinner-bot — Digital Identity / 数字身份. Exploring more possibilities in the AI era. / 探索 AI 时代的更多可能. Knowledge, Research, Development / 知识、研究、开发。" width="100%" />
 
 <br/>
 <br/>
