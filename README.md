@@ -21,6 +21,15 @@
   <img src="assets/timeline.svg?v=6" alt="My Adventure in AI &amp; CS. Research timeline and Current Focus / 研究时间线与当前关注: Autumn 2025, Programming Foundations &amp; First Builds / 编程基础与工程起步; Spring 2026, Machine Learning &amp; Research Practice / 机器学习与研究实践; Summer 2026, Multimodal Intelligence &amp; Policy Distillation / 多模态智能与策略蒸馏; Autumn 2026, Model Architectures &amp; Emerging Directions / 模型架构与前沿探索. Current Focus: Multimodal Intelligence &amp; Policy Distillation / 多模态智能与策略蒸馏; Tabular Learning &amp; Model Architectures / 表格学习与模型架构; Model Capability Transfer &amp; Learning Mechanisms / 模型能力迁移与学习机制; AI-Driven Software Engineering &amp; Open-Source Building / AI 驱动的软件工程与开源构建." width="100%" />
 </picture>
 
+<br/>
+
+<picture>
+  <source media="(max-width: 640px) and (prefers-reduced-motion: reduce)" srcset="assets/connect-mobile-still.svg?v=1">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/connect-still.svg?v=1">
+  <source media="(max-width: 640px)" srcset="assets/connect-mobile.svg?v=1">
+  <img src="assets/connect.svg?v=1" alt="Let's connect！ Have an idea, a question, or a project in mind? Let's exchange perspectives and build what's next. 有想法、问题，或正在酝酿的项目吗？欢迎交流观点，一起构建下一步的可能。" width="100%" />
+</picture>
+
 <!-- Temporarily hidden; preserved for later reuse.
 <h3>Languages and Tools</h3>
 <p>

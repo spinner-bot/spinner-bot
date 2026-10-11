@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 520" width="390" height="520" role="img" aria-labelledby="connect-title connect-desc">
+  <title id="connect-title">Let's connect！</title>
+  <desc id="connect-desc">A bilingual invitation to exchange ideas and build what comes next. Animated signals travel along an upward path.</desc>
+  <style>
+    text { font-family: Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+    .heading { fill: #effffc; font-size: 34px; font-weight: 760; letter-spacing: -.025em; }
+    .body-en { fill: #d6eeec; font-size: 17px; font-weight: 510; }
+    .body-zh { fill: #abc9ca; font-size: 16px; }
+    .copy-rule { fill: none; stroke: #29454d; stroke-width: 1; }
+    .route-ghost { fill: none; stroke: #234b55; stroke-width: 2; stroke-linecap: round; }
+    .route { fill: none; stroke: #3a8387; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+    .route-core { fill: none; stroke: #8debd9; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .arrow { fill: none; stroke: #a1f8e6; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .waypoint { fill: #abfceb; stroke: #0a2831; stroke-width: 2; }
+    .arrival { fill: #0a2831; stroke: #a1f8e6; stroke-width: 3; transform-box: fill-box; transform-origin: center; animation: none; }
+    .traveler { fill: #d3fff4; stroke: #83efdf; stroke-width: 2; }
+    .spark { fill: none; stroke: #7ce7d4; stroke-width: 2; stroke-linecap: round; }
+    .spark-b { fill: #7ce7d4; stroke: none; }
+    .spark-a { animation: none; }
+    .spark-b { animation: none; }
+    @keyframes arrival { 50% { opacity: .5; transform: scale(1.35); } }
+    @keyframes twinkle { 50% { opacity: .28; } }
+    @media (prefers-reduced-motion: reduce) {
+      .arrival, .spark { animation: none; }
+      .traveler { display: none; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#061117"/><stop offset=".20" stop-color="#061117"/><stop offset=".48" stop-color="#07191d"/><stop offset=".70" stop-color="#0b2829"/><stop offset=".85" stop-color="#143b35"/><stop offset=".94" stop-color="#205445"/><stop offset="1" stop-color="#2b6b52"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#70efd5"/><stop offset="1" stop-color="#72c9ff"/></linearGradient>
+    <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#163039" stroke-width="1"/></pattern>
+    <clipPath id="clip"><rect width="390" height="520" rx="16"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="390" height="520" fill="url(#background)"/>
+    <rect width="390" height="520" fill="url(#grid)" opacity=".25"/>
+    <path d="M34 89H356" stroke="#29454d" stroke-width="1"/>
+    <path d="M34 89h58" stroke="url(#accent)" stroke-width="3" stroke-linecap="round"/>
+    <text class="heading" x="34" y="68">Let's connect！</text>
+    <text class="body-en" x="34" y="137">Have an idea, a question, or a</text>
+    <text class="body-en" x="34" y="164">project in mind?</text>
+    <text class="body-en" x="34" y="208">Let's exchange perspectives and</text>
+    <text class="body-en" x="34" y="235">build what's next.</text>
+    <path class="copy-rule" d="M34 258H356"/>
+    <text class="body-zh" x="34" y="288">有想法、问题，或正在酝酿的项目吗？</text>
+    <text class="body-zh" x="34" y="317">欢迎交流观点，一起构建下一步的可能。</text>
+    <path class="route-ghost" d="M70 493 C140 476 180 471 217 441 S290 397 347 378"/>
+    <path class="route" d="M48 474 C103 474 109 448 157 434 S232 389 266 377 S312 339 339 329"/>
+    <path class="route-core" d="M48 474 C103 474 109 448 157 434 S232 389 266 377 S312 339 339 329"/>
+    <circle class="waypoint" cx="48" cy="474" r="4"/>
+<circle class="waypoint" cx="157" cy="434" r="4"/>
+<circle class="waypoint" cx="266" cy="377" r="4"/>
+    <circle class="arrival" cx="339" cy="329" r="12"/>
+    <path class="arrow" d="M315 333L339 329L333 352"/>
+
+    <path class="spark spark-a" d="M287 350l7 -9M303 365l9 -3M323 305l3 -11"/>
+    <circle class="spark spark-b" cx="302" cy="319" r="2.5"/>
+  </g>
+  <rect x=".5" y=".5" width="389" height="519" rx="15.5" fill="none" stroke="#29434c"/>
+</svg>
