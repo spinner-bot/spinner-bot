@@ -96,12 +96,6 @@
     <path d="M76 354H666" stroke="var(--line)" stroke-width="1"/>
     <path d="M76 354h88" stroke="url(#accent)" stroke-width="2"/>
 
-    <!-- One opening quotation mark gives the statement a distinct visual entry. -->
-    <g transform="translate(75 283)" fill="url(#accent)" opacity=".88">
-      <path d="M20 2C9 9 3 18 3 31H17V19H11C13 13 17 9 23 6Z"/>
-      <path d="M39 2C28 9 22 18 22 31H36V19H30C32 13 36 9 42 6Z"/>
-    </g>
-
     <!-- The handle stays fixed; the name follows the language state. -->
     <rect x="76" y="228" width="3" height="18" rx="1.5" fill="var(--mint)"/>
     <text class="handle" x="94" y="245">spinner-bot</text>
@@ -110,13 +104,13 @@
     <g class="copy-en">
       <text class="eyebrow" x="76" y="72">DIGITAL IDENTITY | PERSONAL PORTFOLIO</text>
       <text class="name" x="76" y="205">ZHANG RUIHAN</text>
-      <text class="statement" x="127" y="310">Exploring more possibilities in the AI era.</text>
+      <text class="statement" x="76" y="310">Exploring more possibilities in the AI era.</text>
       <text class="footer-copy" x="76" y="395">KNOWLEDGE · RESEARCH · DEVELOPMENT</text>
     </g>
     <g class="copy-zh">
       <text class="eyebrow eyebrow-zh" x="76" y="72">数字身份 | 个人作品集</text>
       <text class="name name-zh" x="76" y="205">张锐寒</text>
-      <text class="statement statement-zh" x="127" y="310">探索 AI 时代的更多可能</text>
+      <text class="statement statement-zh" x="76" y="310">探索 AI 时代的更多可能</text>
       <text class="footer-copy footer-zh" x="76" y="395">知识 · 研究 · 开发</text>
     </g>
     <path d="M76 86h26" stroke="url(#accent)" stroke-width="2"/>
