@@ -17,8 +17,8 @@
 <br/>
 
 <picture>
-  <source media="(max-width: 640px)" srcset="assets/timeline-mobile.svg">
-  <img src="assets/timeline.svg" alt="Research timeline / 研究时间线: Autumn 2025 秋, Programming Foundations &amp; First Builds / 编程基础与工程起步; Spring 2026 春, Machine Learning &amp; Research Practice / 机器学习与研究实践; Summer 2026 夏, Multimodal Intelligence &amp; Policy Distillation / 多模态智能与策略蒸馏; Autumn 2026 秋, Model Architectures &amp; Emerging Directions / 模型架构与前沿探索." width="100%" />
+  <source media="(max-width: 640px)" srcset="assets/timeline-mobile.svg?v=2">
+  <img src="assets/timeline.svg?v=2" alt="Research timeline / 研究时间线: Autumn 2025 秋, Programming Foundations &amp; First Builds / 编程基础与工程起步; Spring 2026 春, Machine Learning &amp; Research Practice / 机器学习与研究实践; Summer 2026 夏, Multimodal Intelligence &amp; Policy Distillation / 多模态智能与策略蒸馏; Autumn 2026 秋, Model Architectures &amp; Emerging Directions / 模型架构与前沿探索." width="100%" />
 </picture>
 
 <!-- Temporarily hidden; preserved for later reuse.
