@@ -6,9 +6,6 @@
 <br/>
 <br/>
 
-<!-- ═══════════ SNAKE ANIMATION ═══════════ -->
-<img alt="GitHub contribution grid snake animation" src="https://raw.githubusercontent.com/spinner-bot/spinner-bot/output/github-contribution-grid-snake-dark.svg" width="100%">
-
 <br/>
 </div>
 
@@ -29,3 +26,12 @@
   <a href="https://pandas.pydata.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/></a>
 </p>
 -->
+
+<div align="center">
+<!-- ═══════════ SNAKE ANIMATION ═══════════ -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/spinner-bot/spinner-bot/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/spinner-bot/spinner-bot/output/github-contribution-grid-snake.svg">
+  <img alt="GitHub contribution grid snake animation" src="https://raw.githubusercontent.com/spinner-bot/spinner-bot/output/github-contribution-grid-snake.svg" width="100%">
+</picture>
+</div>
