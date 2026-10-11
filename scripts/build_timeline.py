@@ -154,7 +154,11 @@ def shell(width: int, height: int, mobile: bool, content: str) -> str:
       text { font-family: Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
       .panel { fill: #0a1b23; stroke: #2a4850; stroke-width: 1; }
       .hairline { fill: none; stroke: #29454d; stroke-width: 1; }
-      .track { fill: none; stroke: #3b7c80; stroke-width: 2; }
+      .track { fill: none; stroke: #28636d; stroke-width: TRACK_SIZEpx; stroke-linecap: round; stroke-linejoin: round; }
+      .track-core { fill: none; stroke: #76e9d3; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: .75; }
+      .node-halo { fill: #72ead2; opacity: .17; }
+      .node-ring { fill: #0a2630; stroke: #a5ffec; stroke-width: 3; }
+      .node-core { fill: #8ff8e1; }
       .date { fill: #76efd8; font-size: DATE_SIZEpx; font-weight: 700; letter-spacing: .12em; }
       .date-zh { fill: #9ad9dd; font-size: DATE_ZH_SIZEpx; font-weight: 650; }
       .title-en { fill: #f0fcfb; font-size: TITLE_EN_SIZEpx; font-weight: 700; }
@@ -163,8 +167,8 @@ def shell(width: int, height: int, mobile: bool, content: str) -> str:
       .body-zh { fill: #b7cacc; font-size: BODY_ZH_SIZEpx; }
       .year { fill: #e8fffa; font-size: YEAR_SIZEpx; font-weight: 760; letter-spacing: .09em; }
     </style>"""
-    sizes = (11, 12, 15, 16, 14, 14, 14) if mobile else (13, 14, 19, 19, 17, 17, 17)
-    for key, size in zip(("DATE_SIZE", "DATE_ZH_SIZE", "TITLE_EN_SIZE", "TITLE_ZH_SIZE", "BODY_EN_SIZE", "BODY_ZH_SIZE", "YEAR_SIZE"), sizes):
+    sizes = (11, 12, 15, 16, 14, 14, 14, 22) if mobile else (13, 14, 19, 19, 17, 17, 17, 26)
+    for key, size in zip(("DATE_SIZE", "DATE_ZH_SIZE", "TITLE_EN_SIZE", "TITLE_ZH_SIZE", "BODY_EN_SIZE", "BODY_ZH_SIZE", "YEAR_SIZE", "TRACK_SIZE"), sizes):
         styles = styles.replace(key, str(size))
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" role="img" aria-labelledby="timeline-desc">
   <title id="timeline-desc">Bilingual research timeline, 2025 to 2026 / 2025 至 2026 年研究时间线</title>
@@ -185,66 +189,67 @@ def shell(width: int, height: int, mobile: bool, content: str) -> str:
 '''
 
 
-def year_marker(x: int, y: int, width: int = 110) -> str:
+def year_marker(x: int, y: int, width: int = 110, mobile: bool = False) -> str:
+    height = 50 if mobile else 56
     return "\n".join((
-        f'<rect x="{x - width // 2}" y="{y - 20}" width="{width}" height="40" rx="20" fill="#13313a" stroke="#60c8bd"/>',
+        f'<rect x="{x - width // 2}" y="{y - height // 2}" width="{width}" height="{height}" rx="{height // 2}" fill="#10313a" stroke="#9af5df" stroke-width="2"/>',
         text(x, y + 6, "2026", "year", 'text-anchor="middle"'),
     ))
 
 
 def desktop() -> str:
-    left_x, right_x, card_width = 60, 680, 460
+    left_x, right_x, card_width = 86, 314, 800
     first_y = 68
     first, first_height = card(EVENTS[0], left_x, first_y, card_width, False)
-    crossing_y = first_y + first_height + 70
+    crossing_y = first_y + first_height + 76
     pieces = [first]
-    nodes = [(540, first_y + 38, 520)]
-    current_y = crossing_y + 70
+    nodes = [(50, first_y + 38, left_x)]
+    current_y = crossing_y + 76
     for event in EVENTS[1:]:
         drawing, height = card(event, right_x, current_y, card_width, False)
         pieces.append(drawing)
-        nodes.append((660, current_y + 38, 680))
-        current_y += height + 26
+        nodes.append((1150, current_y + 38, right_x + card_width))
+        current_y += height + 30
     total_height = current_y + 12
-    tracks = [
-        f'<path class="track" d="M540 28V{crossing_y - 20} Q540 {crossing_y} 560 {crossing_y} H640 Q660 {crossing_y} 660 {crossing_y + 20} V{total_height - 29}"/>',
-        f'<path d="M560 {crossing_y}H640" stroke="#70efd5" stroke-width="3"/>',
-    ]
+    route = f"M50 28V{crossing_y - 34} Q50 {crossing_y} 84 {crossing_y} H1116 Q1150 {crossing_y} 1150 {crossing_y + 34} V{total_height - 29}"
+    tracks = [f'<path class="track" d="{route}"/>', f'<path class="track-core" d="{route}"/>']
     for index, (node_x, node_y, card_edge) in enumerate(nodes):
         tracks.extend((
             f'<path class="hairline" d="M{min(node_x, card_edge)} {node_y}H{max(node_x, card_edge)}"/>',
-            f'<circle cx="{node_x}" cy="{node_y}" r="{7 if index == 0 else 6}" fill="#0b1f27" stroke="#71ecd7" stroke-width="2"/>',
-            f'<circle cx="{node_x}" cy="{node_y}" r="2" fill="#71ecd7"/>',
+            f'<circle class="node-halo" cx="{node_x}" cy="{node_y}" r="26"/>',
+            f'<circle class="node-ring" cx="{node_x}" cy="{node_y}" r="19"/>',
+            f'<circle class="node-core" cx="{node_x}" cy="{node_y}" r="6"/>',
         ))
-    content = "\n".join(tracks + pieces + [year_marker(600, crossing_y - 31, 88)])
+    content = "\n".join(tracks + pieces + [year_marker(600, crossing_y, 96)])
     return shell(1200, total_height, False, content)
 
 
 def mobile() -> str:
-    x, card_width = 43, 323
+    card_width = 323
     current_y = 44
     pieces = []
     nodes = []
     crossing_y = 0
     for index, event in enumerate(EVENTS):
         if index == 1:
-            crossing_y = current_y + 28
-            current_y = crossing_y + 48
+            crossing_y = current_y + 36
+            current_y = crossing_y + 60
+        x = 44 if index == 0 else 23
         drawing, height = card(event, x, current_y, card_width, True)
         pieces.append(drawing)
-        nodes.append(current_y + 32)
+        nodes.append((22 if index == 0 else 368, current_y + 32, x if index == 0 else x + card_width))
         current_y += height + 26
     total_height = current_y + 12
-    tracks = [
-        f'<path class="track" d="M23 24V{total_height - 29}"/>',
-        f'<path d="M23 {crossing_y}H366" stroke="#70efd5" stroke-width="2" opacity=".65"/>',
-    ]
-    for node_y in nodes:
+    route = f"M22 24V{crossing_y - 22} Q22 {crossing_y} 44 {crossing_y} H346 Q368 {crossing_y} 368 {crossing_y + 22} V{total_height - 29}"
+    tracks = [f'<path class="track" d="{route}"/>', f'<path class="track-core" d="{route}"/>']
+    for node_x, node_y, card_edge in nodes:
         tracks.extend((
-            f'<path class="hairline" d="M23 {node_y}H43"/>',
-            f'<circle cx="23" cy="{node_y}" r="5" fill="#0b1f27" stroke="#71ecd7" stroke-width="2"/>',
+            f'<path class="hairline" d="M{min(node_x, card_edge)} {node_y}H{max(node_x, card_edge)}"/>',
+            f'<circle class="node-halo" cx="{node_x}" cy="{node_y}" r="20"/>',
+            f'<circle class="node-ring" cx="{node_x}" cy="{node_y}" r="16"/>',
+            f'<circle class="node-core" cx="{node_x}" cy="{node_y}" r="5"/>',
         ))
-    content = "\n".join(tracks + pieces + [year_marker(194, crossing_y, 88)])
+    content = "\n".join(tracks + pieces + [year_marker(195, crossing_y, 88, True)])
     return shell(390, total_height, True, content)
 
 
