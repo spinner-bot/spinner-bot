@@ -1,4 +1,4 @@
-"""Capture a review image of the bilingual About Me section."""
+"""Capture desktop and narrow-screen previews of the bilingual About Me card."""
 
 from pathlib import Path
 
@@ -17,9 +17,9 @@ def main() -> None:
         try:
             page = browser.new_page(viewport={"width": 1280, "height": 560}, device_scale_factor=1)
             page.goto(PAGE.as_uri())
-            page.screenshot(path=str(PREVIEW_DIR / "about-me-v1.png"), full_page=True)
+            page.locator("img").screenshot(path=str(PREVIEW_DIR / "about-me-v2.png"))
             page.set_viewport_size({"width": 390, "height": 780})
-            page.screenshot(path=str(PREVIEW_DIR / "about-me-mobile-v1.png"), full_page=True)
+            page.locator("img").screenshot(path=str(PREVIEW_DIR / "about-me-mobile-v2.png"))
         finally:
             browser.close()
 

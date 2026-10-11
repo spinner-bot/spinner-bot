@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 710" width="390" height="710" role="img" aria-labelledby="about-mobile-title about-mobile-desc">
+  <title id="about-mobile-title">ABOUT ME | 关于我</title>
+  <desc id="about-mobile-desc">English profile first, followed by the Chinese translation.</desc>
+  <style>
+    :root {
+      --bg-0: #061117;
+      --bg-1: #0a2029;
+      --line: #29434c;
+      --text: #effffc;
+      --muted: #b0c3c5;
+      --mint: #70efd5;
+      --blue: #72c9ff;
+      --glow: #218c84;
+    }
+    text { font-family: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .title { font-size: 18px; font-weight: 760; letter-spacing: .015em; fill: var(--text); }
+    .section-no { font-size: 11px; font-weight: 700; letter-spacing: .12em; fill: var(--mint); }
+    .body { font-size: 14px; font-weight: 400; fill: var(--muted); }
+    .frame { fill: none; stroke: var(--line); stroke-width: 1; }
+  </style>
+  <defs>
+    <linearGradient id="background-mobile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" style="stop-color:var(--bg-0)"/>
+      <stop offset=".6" style="stop-color:#08171e"/>
+      <stop offset="1" style="stop-color:var(--bg-1)"/>
+    </linearGradient>
+    <radialGradient id="ambient-mobile" cx=".9" cy=".7" r=".8">
+      <stop offset="0" style="stop-color:var(--glow);stop-opacity:.2"/>
+      <stop offset="1" style="stop-color:var(--glow);stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="accent-mobile" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" style="stop-color:var(--mint)"/>
+      <stop offset="1" style="stop-color:var(--blue)"/>
+    </linearGradient>
+    <clipPath id="card-mobile"><rect width="390" height="710" rx="16"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#card-mobile)">
+    <rect width="390" height="710" fill="url(#background-mobile)"/>
+    <rect width="390" height="710" fill="url(#ambient-mobile)"/>
+
+    <rect x="24" y="25" width="2.5" height="21" rx="1.25" fill="url(#accent-mobile)"/>
+    <text class="title" x="37" y="42">ABOUT ME</text>
+    <text class="title" x="136" y="42" fill="var(--mint)">|</text>
+    <text class="title" x="150" y="42">关于我</text>
+    <path d="M24 61H366" stroke="var(--line)" stroke-width="1"/>
+    <path d="M24 61H83" stroke="url(#accent-mobile)" stroke-width="2"/>
+
+    <text class="section-no" x="24" y="99">01 / PROFILE</text>
+    <circle cx="24" cy="115" r="2" fill="var(--mint)"/>
+    <path d="M32 115H366" stroke="var(--line)" stroke-width="1"/>
+    <text class="body" x="24" y="151">
+      <tspan x="24" dy="0">An undergraduate student in Intelligent</tspan>
+      <tspan x="24" dy="24">Science and Technology at Hohai University.</tspan>
+      <tspan x="24" dy="24">My work centers on machine learning and</tspan>
+      <tspan x="24" dy="24">multimodal intelligence, extending into</tspan>
+      <tspan x="24" dy="24">software engineering. I explore model</tspan>
+      <tspan x="24" dy="24">capabilities, learning mechanisms, and</tspan>
+      <tspan x="24" dy="24">methodological transfer—from understanding</tspan>
+      <tspan x="24" dy="24">and reproducing methods to empirical</tspan>
+      <tspan x="24" dy="24">validation and system building.</tspan>
+    </text>
+
+    <path d="M24 392H366" stroke="var(--line)" stroke-width="1"/>
+    <path d="M24 392H83" stroke="url(#accent-mobile)" stroke-width="2"/>
+    <circle cx="24" cy="392" r="2" fill="var(--mint)"/>
+    <text class="section-no" x="24" y="430">02 / 个人简介</text>
+    <circle cx="24" cy="446" r="2" fill="var(--mint)"/>
+    <path d="M32 446H366" stroke="var(--line)" stroke-width="1"/>
+    <text class="body" x="24" y="482">
+      <tspan x="24" dy="0">河海大学智能科学与技术专业本科生。</tspan>
+      <tspan x="24" dy="25">以机器学习与多模态智能为研究主线，</tspan>
+      <tspan x="24" dy="25">以软件工程为实践延伸，持续探索模型能力、</tspan>
+      <tspan x="24" dy="25">学习机制与方法迁移。</tspan>
+      <tspan x="24" dy="25">从理论理解、方法复现到实验验证与系统构建，</tspan>
+      <tspan x="24" dy="25">致力于将技术洞察转化为可验证的研究</tspan>
+      <tspan x="24" dy="25">与可运行的系统。</tspan>
+    </text>
+  </g>
+  <rect class="frame" x=".5" y=".5" width="389" height="709" rx="15.5"/>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-labelledby="about-title about-desc">
+  <title id="about-title">ABOUT ME | 关于我</title>
+  <desc id="about-desc">English and Chinese profile in two columns. The English paragraph is on the left; the Chinese translation is on the right.</desc>
+  <style>
+    :root {
+      --bg-0: #061117;
+      --bg-1: #0a2029;
+      --line: #29434c;
+      --line-soft: #18313a;
+      --grid: #18313a;
+      --text: #effffc;
+      --muted: #a4b9bb;
+      --mint: #70efd5;
+      --blue: #72c9ff;
+      --glow: #218c84;
+    }
+    text { font-family: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .title { font-size: 23px; font-weight: 760; letter-spacing: .025em; fill: var(--text); }
+    .section-no { font-size: 12px; font-weight: 700; letter-spacing: .16em; fill: var(--mint); }
+    .body { font-size: 18px; font-weight: 400; fill: var(--muted); }
+    .frame { fill: none; stroke: var(--line); stroke-width: 1; }
+    .divider { stroke: var(--line); stroke-width: 1; }
+    .grid { stroke: var(--line-soft); stroke-width: 1; }
+  </style>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" style="stop-color:var(--bg-0)"/>
+      <stop offset=".58" style="stop-color:#08171e"/>
+      <stop offset="1" style="stop-color:var(--bg-1)"/>
+    </linearGradient>
+    <radialGradient id="ambient" cx="1" cy=".55" r=".7">
+      <stop offset="0" style="stop-color:var(--glow);stop-opacity:.22"/>
+      <stop offset="1" style="stop-color:var(--glow);stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" style="stop-color:var(--mint)"/>
+      <stop offset="1" style="stop-color:var(--blue)"/>
+    </linearGradient>
+    <pattern id="micro-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="var(--grid)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="grid-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="white" stop-opacity="0"/>
+      <stop offset="1" stop-color="white" stop-opacity=".55"/>
+    </linearGradient>
+    <mask id="grid-mask"><rect width="1200" height="420" fill="url(#grid-fade)"/></mask>
+    <clipPath id="card"><rect width="1200" height="420" rx="20"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="420" fill="url(#background)"/>
+    <rect width="1200" height="420" fill="url(#ambient)"/>
+    <rect width="1200" height="420" fill="url(#micro-grid)" mask="url(#grid-mask)"/>
+
+    <rect x="76" y="48" width="3" height="27" rx="1.5" fill="url(#accent)"/>
+    <text class="title" x="94" y="69">ABOUT ME</text>
+    <text class="title" x="230" y="69" fill="var(--mint)">|</text>
+    <text class="title" x="250" y="69">关于我</text>
+    <path d="M76 94H1124" stroke="var(--line)" stroke-width="1"/>
+    <path d="M76 94H178" stroke="url(#accent)" stroke-width="2"/>
+
+    <text class="section-no" x="76" y="137">01 / PROFILE</text>
+    <circle cx="76" cy="158" r="2.5" fill="var(--mint)"/>
+    <path d="M84 158H562" stroke="var(--line)" stroke-width="1"/>
+
+    <text class="section-no" x="638" y="137">02 / 个人简介</text>
+    <circle cx="638" cy="158" r="2.5" fill="var(--mint)"/>
+    <path d="M646 158H1124" stroke="var(--line)" stroke-width="1"/>
+
+    <path class="divider" d="M600 126V374"/>
+    <circle cx="600" cy="126" r="3" fill="var(--mint)"/>
+    <circle cx="600" cy="374" r="2" fill="var(--blue)" opacity=".75"/>
+
+    <text class="body" x="76" y="197">
+      <tspan x="76" dy="0">An undergraduate student in Intelligent Science and</tspan>
+      <tspan x="76" dy="28">Technology at Hohai University. My work centers on</tspan>
+      <tspan x="76" dy="28">machine learning and multimodal intelligence, extending</tspan>
+      <tspan x="76" dy="28">into software engineering. I explore model capabilities,</tspan>
+      <tspan x="76" dy="28">learning mechanisms, and methodological transfer—from</tspan>
+      <tspan x="76" dy="28">understanding and reproducing methods to empirical</tspan>
+      <tspan x="76" dy="28">validation and system building.</tspan>
+    </text>
+
+    <text class="body" x="638" y="197">
+      <tspan x="638" dy="0">河海大学智能科学与技术专业本科生。以机器学习</tspan>
+      <tspan x="638" dy="31">与多模态智能为研究主线，以软件工程为实践延伸，</tspan>
+      <tspan x="638" dy="31">持续探索模型能力、学习机制与方法迁移。</tspan>
+      <tspan x="638" dy="31">从理论理解、方法复现到实验验证与系统构建，</tspan>
+      <tspan x="638" dy="31">致力于将技术洞察转化为可验证的研究与可运行的系统。</tspan>
+    </text>
+  </g>
+  <rect class="frame" x=".5" y=".5" width="1199" height="419" rx="19.5"/>
+</svg>

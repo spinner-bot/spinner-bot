@@ -2,42 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>About Me section preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Me SVG card preview</title>
   <style>
-    :root { color-scheme: dark; }
-    body { margin: 0; padding: 34px; background: #071219; color: #eaf5f4; font: 16px/1.75 Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
-    main { max-width: 1200px; margin: auto; }
-    h2 { margin: 0 0 24px; color: #effffc; font-size: 28px; letter-spacing: -.025em; }
-    h2 span { color: #7ce7d4; font-size: 20px; font-weight: 500; }
-    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
-    td { padding: 0 14px; vertical-align: top; }
-    td:first-child { width: 48%; padding-left: 0; }
-    td.divider { width: 4%; padding: 0; text-align: center; }
-    td:last-child { width: 48%; padding-right: 0; }
-    small { color: #7ce7d4; font-size: 12px; font-weight: 700; letter-spacing: .11em; }
-    img.about-rule { display: block; width: 100%; height: 8px; margin: 12px 0 18px; }
-    td.divider img { width: 8px; height: 210px; margin: 0; }
-    p { margin: 0; color: #c0d0d2; font-size: 16px; line-height: 1.85; }
+    html, body { margin: 0; min-height: 100%; background: #fff; }
+    img { display: block; width: 100%; height: auto; }
+    main { width: 100%; max-width: 1200px; margin: 0 auto; }
   </style>
 </head>
 <body>
   <main>
-    <h2>ABOUT ME <span>· 关于我</span></h2>
-    <table>
-      <tr>
-        <td>
-          <strong><small>01 / PROFILE · ENGLISH</small></strong>
-          <img class="about-rule" src="../../assets/about-rule.svg" alt="">
-          <p>An undergraduate student in Intelligent Science and Technology at Hohai University. My work centers on machine learning and multimodal intelligence, extending into software engineering. I explore model capabilities, learning mechanisms, and methodological transfer—from understanding and reproducing methods to empirical validation and system building.</p>
-        </td>
-        <td class="divider"><img src="../../assets/about-divider.svg" alt=""></td>
-        <td>
-          <strong><small>01 / 个人简介 · 中文</small></strong>
-          <img class="about-rule" src="../../assets/about-rule.svg" alt="">
-          <p>河海大学智能科学与技术专业本科生。以机器学习与多模态智能为研究主线，以软件工程为实践延伸，持续探索模型能力、学习机制与方法迁移。从理论理解、方法复现到实验验证与系统构建，致力于将技术洞察转化为可验证的研究与可运行的系统。</p>
-        </td>
-      </tr>
-    </table>
+    <picture>
+      <source media="(max-width: 640px)" srcset="../../assets/about-me-mobile.svg">
+      <img src="../../assets/about-me.svg" alt="ABOUT ME | 关于我. An undergraduate student in Intelligent Science and Technology at Hohai University. My work centers on machine learning and multimodal intelligence, extending into software engineering. I explore model capabilities, learning mechanisms, and methodological transfer—from understanding and reproducing methods to empirical validation and system building. 河海大学智能科学与技术专业本科生。以机器学习与多模态智能为研究主线，以软件工程为实践延伸，持续探索模型能力、学习机制与方法迁移。从理论理解、方法复现到实验验证与系统构建，致力于将技术洞察转化为可验证的研究与可运行的系统。">
+    </picture>
   </main>
 </body>
 </html>
