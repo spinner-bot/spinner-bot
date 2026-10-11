@@ -11,7 +11,7 @@
 | 一句话 | Exploring more possibilities in the AI era. | 探索 AI 时代的更多可能 |
 | 底部关键词 | KNOWLEDGE · RESEARCH · DEVELOPMENT | 知识 · 研究 · 开发 |
 
-句子来自现有 `scripts/generate_typing.py`，不更改原意。顶部、姓名、概括句和底部关键词同步轮播，不并列；`spinner-bot` 固定显示，形成视觉锚点。中部只显示当前语言的姓名和 `spinner-bot`，不加“姓名”“网名”等标签或 `@` 前缀。
+句子来自旧版打字动画脚本（现归档于 `archive/legacy-scripts/generate_typing.py`），不更改原意。顶部、姓名、概括句和底部关键词同步轮播，不并列；`spinner-bot` 固定显示，形成视觉锚点。中部只显示当前语言的姓名和 `spinner-bot`，不加“姓名”“网名”等标签或 `@` 前缀。
 
 ## 设计来源与方向
 
@@ -40,7 +40,7 @@
 - GitHub README 引用独立 `assets/hero.svg`；不内联 SVG，不使用 JavaScript、外部字体或外部资源。
 - SVG 包含 `<title>`、`<desc>`；README 的 `<img alt>` 同时写明中英文身份及概括句，因为图像上下文的辅助技术通常优先读取 `alt`。
 - 深色背景内置，亮色与暗色 GitHub 主题下外观一致。
-- 旧打字 GIF 保留在 `assets/`，其生成脚本保留在 `scripts/`，作为本次设计演变的原始资料。原有蛇形图和工具图标仍接在封面下方。
+- 旧打字 GIF 与生成脚本分别移至 `archive/legacy-assets/`、`archive/legacy-scripts/`，作为本次设计演变的原始资料。贪吃蛇仍作为 README 最后一部分。
 
 ## 实施记录
 
