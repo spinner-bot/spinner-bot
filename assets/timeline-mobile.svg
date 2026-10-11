@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 3573" width="390" height="3573" role="img" aria-labelledby="timeline-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 3634" width="390" height="3634" role="img" aria-labelledby="timeline-desc">
   <title id="timeline-desc">Bilingual research timeline and current focus / 研究时间线与当前关注</title>
   <style>
       text { font-family: Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
@@ -15,6 +15,7 @@
       .body-en { fill: #b7cacc; font-size: 14px; }
       .body-zh { fill: #b7cacc; font-size: 14px; }
       .year { fill: #e8fffa; font-size: 14px; font-weight: 760; letter-spacing: .09em; }
+      .timeline-heading { fill: #effffc; font-size: 19px; font-weight: 750; letter-spacing: .015em; }
       .focus-heading { fill: #effffc; font-size: 19px; font-weight: 760; letter-spacing: .02em; }
       .focus-row { fill: #0b2029; stroke: #2a4850; stroke-width: 1; }
       .focus-en { fill: #e5f7f4; font-size: 15px; font-weight: 650; }
@@ -24,156 +25,159 @@
     <linearGradient id="background" x2="1" y2="1"><stop stop-color="#061117"/><stop offset=".62" stop-color="#081b23"/><stop offset="1" stop-color="#0b222d"/></linearGradient>
     <linearGradient id="accent"><stop stop-color="#70efd5"/><stop offset="1" stop-color="#72c9ff"/></linearGradient>
     <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#163039" stroke-width="1"/></pattern>
-    <clipPath id="clip"><rect width="390" height="3573" rx="16"/></clipPath>
+    <clipPath id="clip"><rect width="390" height="3634" rx="16"/></clipPath>
   </defs>
   <g clip-path="url(#clip)">
-    <rect width="390" height="3573" fill="url(#background)"/>
-    <rect width="390" height="3573" fill="url(#grid)" opacity=".25"/>
-    <path class="track" d="M27 24V547 Q27 617 97 617 H293 Q363 617 363 687 V2573 Q363 2631 315 2659 L243 2701 Q195 2729 195 2787 V2847"/>
-<path class="track-core" d="M27 24V547 Q27 617 97 617 H293 Q363 617 363 687 V2573 Q363 2631 315 2659 L243 2701 Q195 2729 195 2787 V2847"/>
-<path class="hairline" d="M27 76H54"/>
-<circle class="node-halo" cx="27" cy="76" r="20"/>
-<circle class="node-ring" cx="27" cy="76" r="16"/>
-<circle class="node-core" cx="27" cy="76" r="5"/>
-<path class="hairline" d="M336 709H363"/>
-<circle class="node-halo" cx="363" cy="709" r="20"/>
-<circle class="node-ring" cx="363" cy="709" r="16"/>
-<circle class="node-core" cx="363" cy="709" r="5"/>
-<path class="hairline" d="M336 1317H363"/>
-<circle class="node-halo" cx="363" cy="1317" r="20"/>
-<circle class="node-ring" cx="363" cy="1317" r="16"/>
-<circle class="node-core" cx="363" cy="1317" r="5"/>
-<path class="hairline" d="M336 1973H363"/>
-<circle class="node-halo" cx="363" cy="1973" r="20"/>
-<circle class="node-ring" cx="363" cy="1973" r="16"/>
-<circle class="node-core" cx="363" cy="1973" r="5"/>
-<rect class="panel" x="54" y="44" width="282" height="511" rx="16"/>
-<rect x="75" y="68" width="3" height="20" rx="1.5" fill="url(#accent)"/>
-<text class="date" x="89" y="81" >AUTUMN 2025</text>
-<path class="hairline" d="M75 93H315"/>
-<text class="title-en" x="75" y="120" >Programming Foundations &amp; First</text>
-<text class="title-en" x="75" y="142" >Builds</text>
-<text class="title-zh" x="75" y="168" >编程基础与工程起步</text>
-<text class="body-en" x="75" y="213" >Began undergraduate study at Hohai</text>
-<text class="body-en" x="75" y="236" >University, establishing a</text>
-<text class="body-en" x="75" y="259" >foundation in computing and</text>
-<text class="body-en" x="75" y="282" >intelligent technologies. C/C++</text>
-<text class="body-en" x="75" y="305" >programming and team software</text>
-<text class="body-en" x="75" y="328" >projects developed my ability to</text>
-<text class="body-en" x="75" y="351" >translate problems into working</text>
-<text class="body-en" x="75" y="374" >implementations.</text>
-<path class="hairline" d="M75 397H315"/>
-<text class="body-zh" x="75" y="424" >进入河海大学，开启计算机与智能技</text>
-<text class="body-zh" x="75" y="449" >术领域的系统学习。通过 C/C++ 编</text>
-<text class="body-zh" x="75" y="474" >程和团队软件项目建立实现基础，逐</text>
-<text class="body-zh" x="75" y="499" >步形成从问题分析到代码落地的工程</text>
-<text class="body-zh" x="75" y="524" >思维。</text>
-<path d="M75 543H117" stroke="url(#accent)" stroke-width="2"/>
-<rect class="panel" x="54" y="677" width="282" height="582" rx="16"/>
-<rect x="75" y="701" width="3" height="20" rx="1.5" fill="url(#accent)"/>
-<text class="date" x="89" y="714" >SPRING 2026</text>
-<path class="hairline" d="M75 726H315"/>
-<text class="title-en" x="75" y="753" >Machine Learning &amp; Research</text>
-<text class="title-en" x="75" y="775" >Practice</text>
-<text class="title-zh" x="75" y="801" >机器学习与研究实践</text>
-<text class="body-en" x="75" y="846" >Developed a broad foundation in</text>
-<text class="body-en" x="75" y="869" >machine learning and deep learning</text>
-<text class="body-en" x="75" y="892" >through model implementation and</text>
-<text class="body-en" x="75" y="915" >experimentation. Joined a research</text>
-<text class="body-en" x="75" y="938" >team to investigate specific machine</text>
-<text class="body-en" x="75" y="961" >learning algorithm optimization</text>
-<text class="body-en" x="75" y="984" >problems, extending my focus from</text>
-<text class="body-en" x="75" y="1007" >learning algorithms to research</text>
-<text class="body-en" x="75" y="1030" >questions, methodological design, and</text>
-<text class="body-en" x="75" y="1053" >empirical analysis.</text>
-<path class="hairline" d="M75 1076H315"/>
-<text class="body-zh" x="75" y="1103" >系统拓展机器学习与深度学习知识，</text>
-<text class="body-zh" x="75" y="1128" >通过模型实现和实验建立对核心方法</text>
-<text class="body-zh" x="75" y="1153" >的理解。进入研究团队，开始探索具</text>
-<text class="body-zh" x="75" y="1178" >体的机器学习算法优化问题，将关注</text>
-<text class="body-zh" x="75" y="1203" >点从算法学习推进到研究问题、方法</text>
-<text class="body-zh" x="75" y="1228" >设计与实证分析。</text>
-<path d="M75 1247H117" stroke="url(#accent)" stroke-width="2"/>
-<rect class="panel" x="54" y="1285" width="282" height="630" rx="16"/>
-<rect x="75" y="1309" width="3" height="20" rx="1.5" fill="url(#accent)"/>
-<text class="date" x="89" y="1322" >SUMMER 2026</text>
-<path class="hairline" d="M75 1334H315"/>
-<text class="title-en" x="75" y="1361" >Multimodal Intelligence &amp; Policy</text>
-<text class="title-en" x="75" y="1383" >Distillation</text>
-<text class="title-zh" x="75" y="1409" >多模态智能与策略蒸馏</text>
-<text class="body-en" x="75" y="1454" >Extended my research focus to</text>
-<text class="body-en" x="75" y="1477" >multimodal large language models and</text>
-<text class="body-en" x="75" y="1500" >Online Policy Distillation (OPD).</text>
-<text class="body-en" x="75" y="1523" >With access to advanced computing</text>
-<text class="body-en" x="75" y="1546" >resources, I independently pursued</text>
-<text class="body-en" x="75" y="1569" >Vision-OPD reproduction and</text>
-<text class="body-en" x="75" y="1592" >follow-up experiments, testing</text>
-<text class="body-en" x="75" y="1615" >methodological hypotheses, analyzing</text>
-<text class="body-en" x="75" y="1638" >performance gaps, and investigating</text>
-<text class="body-en" x="75" y="1661" >the possibilities and limitations of</text>
-<text class="body-en" x="75" y="1684" >model capability transfer.</text>
-<path class="hairline" d="M75 1707H315"/>
-<text class="body-zh" x="75" y="1734" >将研究重心拓展至多模态大语言模型</text>
-<text class="body-zh" x="75" y="1759" >与在线策略蒸馏（Online Policy</text>
-<text class="body-zh" x="75" y="1784" >Distillation, OPD）。借助高水平计</text>
-<text class="body-zh" x="75" y="1809" >算资源，独立开展 Vision-OPD 复现</text>
-<text class="body-zh" x="75" y="1834" >与后续方案探索，通过实验检验方法</text>
-<text class="body-zh" x="75" y="1859" >假设、分析性能差距，并进一步理解</text>
-<text class="body-zh" x="75" y="1884" >模型能力迁移的技术路径与局限。</text>
-<path d="M75 1903H117" stroke="url(#accent)" stroke-width="2"/>
-<rect class="panel" x="54" y="1941" width="282" height="582" rx="16"/>
-<rect x="75" y="1965" width="3" height="20" rx="1.5" fill="url(#accent)"/>
-<text class="date" x="89" y="1978" >AUTUMN 2026</text>
-<path class="hairline" d="M75 1990H315"/>
-<text class="title-en" x="75" y="2017" >Model Architectures &amp; Emerging</text>
-<text class="title-en" x="75" y="2039" >Directions</text>
-<text class="title-zh" x="75" y="2065" >模型架构与前沿探索</text>
-<text class="body-en" x="75" y="2110" >Expanded into tabular learning and</text>
-<text class="body-en" x="75" y="2133" >alternative model architectures,</text>
-<text class="body-en" x="75" y="2156" >exploring TabPFN, gradient-boosted</text>
-<text class="body-en" x="75" y="2179" >trees, and FT-Transformer, while</text>
-<text class="body-en" x="75" y="2202" >investigating the mechanisms and</text>
-<text class="body-en" x="75" y="2225" >potential applications of emerging</text>
-<text class="body-en" x="75" y="2248" >approaches such as JEV. Continuing</text>
-<text class="body-en" x="75" y="2271" >to identify promising research</text>
-<text class="body-en" x="75" y="2294" >questions and technical</text>
-<text class="body-en" x="75" y="2317" >opportunities.</text>
-<path class="hairline" d="M75 2340H315"/>
-<text class="body-zh" x="75" y="2367" >将探索范围延伸至表格学习与新型模</text>
-<text class="body-zh" x="75" y="2392" >型架构，研究 TabPFN、梯度提升树</text>
-<text class="body-zh" x="75" y="2417" >和 FT-Transformer 等方法，并关</text>
-<text class="body-zh" x="75" y="2442" >注 JEV 等新兴方向的机制与应用潜</text>
-<text class="body-zh" x="75" y="2467" >力。持续拓展技术视野，寻找具有研</text>
-<text class="body-zh" x="75" y="2492" >究价值的问题与切入点。</text>
-<path d="M75 2511H117" stroke="url(#accent)" stroke-width="2"/>
-<rect x="151" y="592" width="88" height="50" rx="25" fill="#10313a" stroke="#9af5df" stroke-width="2"/>
-<text class="year" x="195" y="623" text-anchor="middle">2026</text>
-<circle cx="195" cy="2871" r="6" fill="#91f5df" opacity="1"/>
-<circle cx="195" cy="2891" r="5" fill="#91f5df" opacity="0.78"/>
-<circle cx="195" cy="2911" r="4" fill="#91f5df" opacity="0.56"/>
-<text class="focus-heading" x="195" y="2980" text-anchor="middle">CURRENT FOCUS 当前关注</text>
-<path d="M107 2999H283" stroke="#31535b" stroke-width="1"/>
-<path d="M160 2999H230" stroke="url(#accent)" stroke-width="2"/>
-<rect class="focus-row" x="33" y="3027" width="324" height="117" rx="14"/>
-<rect x="52" y="3049" width="3" height="73" rx="1.5" fill="url(#accent)"/>
-<text class="focus-en" x="71" y="3061" >Multimodal Intelligence &amp; Policy</text>
-<text class="focus-en" x="71" y="3083" >Distillation</text>
-<text class="focus-zh" x="71" y="3117" >多模态智能与策略蒸馏</text>
-<rect class="focus-row" x="33" y="3157" width="324" height="117" rx="14"/>
-<rect x="52" y="3179" width="3" height="73" rx="1.5" fill="url(#accent)"/>
-<text class="focus-en" x="71" y="3191" >Tabular Learning &amp; Model</text>
-<text class="focus-en" x="71" y="3213" >Architectures</text>
-<text class="focus-zh" x="71" y="3247" >表格学习与模型架构</text>
-<rect class="focus-row" x="33" y="3287" width="324" height="117" rx="14"/>
-<rect x="52" y="3309" width="3" height="73" rx="1.5" fill="url(#accent)"/>
-<text class="focus-en" x="71" y="3321" >Model Capability Transfer &amp;</text>
-<text class="focus-en" x="71" y="3343" >Learning Mechanisms</text>
-<text class="focus-zh" x="71" y="3377" >模型能力迁移与学习机制</text>
-<rect class="focus-row" x="33" y="3417" width="324" height="117" rx="14"/>
-<rect x="52" y="3439" width="3" height="73" rx="1.5" fill="url(#accent)"/>
-<text class="focus-en" x="71" y="3451" >AI-Driven Software Engineering &amp;</text>
-<text class="focus-en" x="71" y="3473" >Open-Source Building</text>
-<text class="focus-zh" x="71" y="3507" >AI 驱动的软件工程与开源构建</text>
+    <rect width="390" height="3634" fill="url(#background)"/>
+    <rect width="390" height="3634" fill="url(#grid)" opacity=".25"/>
+    <text class="timeline-heading" x="195" y="51" text-anchor="middle">My Adventure in AI &amp; CS</text>
+<path d="M139 68H251" stroke="#31535b" stroke-width="1"/>
+<path d="M168 68H222" stroke="url(#accent)" stroke-width="2"/>
+<path class="track" d="M27 79V608 Q27 678 97 678 H293 Q363 678 363 748 V2634 Q363 2692 315 2720 L243 2762 Q195 2790 195 2848 V2908"/>
+<path class="track-core" d="M27 79V608 Q27 678 97 678 H293 Q363 678 363 748 V2634 Q363 2692 315 2720 L243 2762 Q195 2790 195 2848 V2908"/>
+<path class="hairline" d="M27 137H54"/>
+<circle class="node-halo" cx="27" cy="137" r="20"/>
+<circle class="node-ring" cx="27" cy="137" r="16"/>
+<circle class="node-core" cx="27" cy="137" r="5"/>
+<path class="hairline" d="M336 770H363"/>
+<circle class="node-halo" cx="363" cy="770" r="20"/>
+<circle class="node-ring" cx="363" cy="770" r="16"/>
+<circle class="node-core" cx="363" cy="770" r="5"/>
+<path class="hairline" d="M336 1378H363"/>
+<circle class="node-halo" cx="363" cy="1378" r="20"/>
+<circle class="node-ring" cx="363" cy="1378" r="16"/>
+<circle class="node-core" cx="363" cy="1378" r="5"/>
+<path class="hairline" d="M336 2034H363"/>
+<circle class="node-halo" cx="363" cy="2034" r="20"/>
+<circle class="node-ring" cx="363" cy="2034" r="16"/>
+<circle class="node-core" cx="363" cy="2034" r="5"/>
+<rect class="panel" x="54" y="105" width="282" height="511" rx="16"/>
+<rect x="75" y="129" width="3" height="20" rx="1.5" fill="url(#accent)"/>
+<text class="date" x="89" y="142" >AUTUMN 2025</text>
+<path class="hairline" d="M75 154H315"/>
+<text class="title-en" x="75" y="181" >Programming Foundations &amp; First</text>
+<text class="title-en" x="75" y="203" >Builds</text>
+<text class="title-zh" x="75" y="229" >编程基础与工程起步</text>
+<text class="body-en" x="75" y="274" >Began undergraduate study at Hohai</text>
+<text class="body-en" x="75" y="297" >University, establishing a</text>
+<text class="body-en" x="75" y="320" >foundation in computing and</text>
+<text class="body-en" x="75" y="343" >intelligent technologies. C/C++</text>
+<text class="body-en" x="75" y="366" >programming and team software</text>
+<text class="body-en" x="75" y="389" >projects developed my ability to</text>
+<text class="body-en" x="75" y="412" >translate problems into working</text>
+<text class="body-en" x="75" y="435" >implementations.</text>
+<path class="hairline" d="M75 458H315"/>
+<text class="body-zh" x="75" y="485" >进入河海大学，开启计算机与智能技</text>
+<text class="body-zh" x="75" y="510" >术领域的系统学习。通过 C/C++ 编</text>
+<text class="body-zh" x="75" y="535" >程和团队软件项目建立实现基础，逐</text>
+<text class="body-zh" x="75" y="560" >步形成从问题分析到代码落地的工程</text>
+<text class="body-zh" x="75" y="585" >思维。</text>
+<path d="M75 604H117" stroke="url(#accent)" stroke-width="2"/>
+<rect class="panel" x="54" y="738" width="282" height="582" rx="16"/>
+<rect x="75" y="762" width="3" height="20" rx="1.5" fill="url(#accent)"/>
+<text class="date" x="89" y="775" >SPRING 2026</text>
+<path class="hairline" d="M75 787H315"/>
+<text class="title-en" x="75" y="814" >Machine Learning &amp; Research</text>
+<text class="title-en" x="75" y="836" >Practice</text>
+<text class="title-zh" x="75" y="862" >机器学习与研究实践</text>
+<text class="body-en" x="75" y="907" >Developed a broad foundation in</text>
+<text class="body-en" x="75" y="930" >machine learning and deep learning</text>
+<text class="body-en" x="75" y="953" >through model implementation and</text>
+<text class="body-en" x="75" y="976" >experimentation. Joined a research</text>
+<text class="body-en" x="75" y="999" >team to investigate specific machine</text>
+<text class="body-en" x="75" y="1022" >learning algorithm optimization</text>
+<text class="body-en" x="75" y="1045" >problems, extending my focus from</text>
+<text class="body-en" x="75" y="1068" >learning algorithms to research</text>
+<text class="body-en" x="75" y="1091" >questions, methodological design, and</text>
+<text class="body-en" x="75" y="1114" >empirical analysis.</text>
+<path class="hairline" d="M75 1137H315"/>
+<text class="body-zh" x="75" y="1164" >系统拓展机器学习与深度学习知识，</text>
+<text class="body-zh" x="75" y="1189" >通过模型实现和实验建立对核心方法</text>
+<text class="body-zh" x="75" y="1214" >的理解。进入研究团队，开始探索具</text>
+<text class="body-zh" x="75" y="1239" >体的机器学习算法优化问题，将关注</text>
+<text class="body-zh" x="75" y="1264" >点从算法学习推进到研究问题、方法</text>
+<text class="body-zh" x="75" y="1289" >设计与实证分析。</text>
+<path d="M75 1308H117" stroke="url(#accent)" stroke-width="2"/>
+<rect class="panel" x="54" y="1346" width="282" height="630" rx="16"/>
+<rect x="75" y="1370" width="3" height="20" rx="1.5" fill="url(#accent)"/>
+<text class="date" x="89" y="1383" >SUMMER 2026</text>
+<path class="hairline" d="M75 1395H315"/>
+<text class="title-en" x="75" y="1422" >Multimodal Intelligence &amp; Policy</text>
+<text class="title-en" x="75" y="1444" >Distillation</text>
+<text class="title-zh" x="75" y="1470" >多模态智能与策略蒸馏</text>
+<text class="body-en" x="75" y="1515" >Extended my research focus to</text>
+<text class="body-en" x="75" y="1538" >multimodal large language models and</text>
+<text class="body-en" x="75" y="1561" >Online Policy Distillation (OPD).</text>
+<text class="body-en" x="75" y="1584" >With access to advanced computing</text>
+<text class="body-en" x="75" y="1607" >resources, I independently pursued</text>
+<text class="body-en" x="75" y="1630" >Vision-OPD reproduction and</text>
+<text class="body-en" x="75" y="1653" >follow-up experiments, testing</text>
+<text class="body-en" x="75" y="1676" >methodological hypotheses, analyzing</text>
+<text class="body-en" x="75" y="1699" >performance gaps, and investigating</text>
+<text class="body-en" x="75" y="1722" >the possibilities and limitations of</text>
+<text class="body-en" x="75" y="1745" >model capability transfer.</text>
+<path class="hairline" d="M75 1768H315"/>
+<text class="body-zh" x="75" y="1795" >将研究重心拓展至多模态大语言模型</text>
+<text class="body-zh" x="75" y="1820" >与在线策略蒸馏（Online Policy</text>
+<text class="body-zh" x="75" y="1845" >Distillation, OPD）。借助高水平计</text>
+<text class="body-zh" x="75" y="1870" >算资源，独立开展 Vision-OPD 复现</text>
+<text class="body-zh" x="75" y="1895" >与后续方案探索，通过实验检验方法</text>
+<text class="body-zh" x="75" y="1920" >假设、分析性能差距，并进一步理解</text>
+<text class="body-zh" x="75" y="1945" >模型能力迁移的技术路径与局限。</text>
+<path d="M75 1964H117" stroke="url(#accent)" stroke-width="2"/>
+<rect class="panel" x="54" y="2002" width="282" height="582" rx="16"/>
+<rect x="75" y="2026" width="3" height="20" rx="1.5" fill="url(#accent)"/>
+<text class="date" x="89" y="2039" >AUTUMN 2026</text>
+<path class="hairline" d="M75 2051H315"/>
+<text class="title-en" x="75" y="2078" >Model Architectures &amp; Emerging</text>
+<text class="title-en" x="75" y="2100" >Directions</text>
+<text class="title-zh" x="75" y="2126" >模型架构与前沿探索</text>
+<text class="body-en" x="75" y="2171" >Expanded into tabular learning and</text>
+<text class="body-en" x="75" y="2194" >alternative model architectures,</text>
+<text class="body-en" x="75" y="2217" >exploring TabPFN, gradient-boosted</text>
+<text class="body-en" x="75" y="2240" >trees, and FT-Transformer, while</text>
+<text class="body-en" x="75" y="2263" >investigating the mechanisms and</text>
+<text class="body-en" x="75" y="2286" >potential applications of emerging</text>
+<text class="body-en" x="75" y="2309" >approaches such as JEV. Continuing</text>
+<text class="body-en" x="75" y="2332" >to identify promising research</text>
+<text class="body-en" x="75" y="2355" >questions and technical</text>
+<text class="body-en" x="75" y="2378" >opportunities.</text>
+<path class="hairline" d="M75 2401H315"/>
+<text class="body-zh" x="75" y="2428" >将探索范围延伸至表格学习与新型模</text>
+<text class="body-zh" x="75" y="2453" >型架构，研究 TabPFN、梯度提升树</text>
+<text class="body-zh" x="75" y="2478" >和 FT-Transformer 等方法，并关</text>
+<text class="body-zh" x="75" y="2503" >注 JEV 等新兴方向的机制与应用潜</text>
+<text class="body-zh" x="75" y="2528" >力。持续拓展技术视野，寻找具有研</text>
+<text class="body-zh" x="75" y="2553" >究价值的问题与切入点。</text>
+<path d="M75 2572H117" stroke="url(#accent)" stroke-width="2"/>
+<rect x="151" y="653" width="88" height="50" rx="25" fill="#10313a" stroke="#9af5df" stroke-width="2"/>
+<text class="year" x="195" y="684" text-anchor="middle">2026</text>
+<circle cx="195" cy="2932" r="6" fill="#91f5df" opacity="1"/>
+<circle cx="195" cy="2952" r="5" fill="#91f5df" opacity="0.78"/>
+<circle cx="195" cy="2972" r="4" fill="#91f5df" opacity="0.56"/>
+<text class="focus-heading" x="195" y="3041" text-anchor="middle">CURRENT FOCUS 当前关注</text>
+<path d="M107 3060H283" stroke="#31535b" stroke-width="1"/>
+<path d="M160 3060H230" stroke="url(#accent)" stroke-width="2"/>
+<rect class="focus-row" x="33" y="3088" width="324" height="117" rx="14"/>
+<rect x="52" y="3110" width="3" height="73" rx="1.5" fill="url(#accent)"/>
+<text class="focus-en" x="71" y="3122" >Multimodal Intelligence &amp; Policy</text>
+<text class="focus-en" x="71" y="3144" >Distillation</text>
+<text class="focus-zh" x="71" y="3178" >多模态智能与策略蒸馏</text>
+<rect class="focus-row" x="33" y="3218" width="324" height="117" rx="14"/>
+<rect x="52" y="3240" width="3" height="73" rx="1.5" fill="url(#accent)"/>
+<text class="focus-en" x="71" y="3252" >Tabular Learning &amp; Model</text>
+<text class="focus-en" x="71" y="3274" >Architectures</text>
+<text class="focus-zh" x="71" y="3308" >表格学习与模型架构</text>
+<rect class="focus-row" x="33" y="3348" width="324" height="117" rx="14"/>
+<rect x="52" y="3370" width="3" height="73" rx="1.5" fill="url(#accent)"/>
+<text class="focus-en" x="71" y="3382" >Model Capability Transfer &amp;</text>
+<text class="focus-en" x="71" y="3404" >Learning Mechanisms</text>
+<text class="focus-zh" x="71" y="3438" >模型能力迁移与学习机制</text>
+<rect class="focus-row" x="33" y="3478" width="324" height="117" rx="14"/>
+<rect x="52" y="3500" width="3" height="73" rx="1.5" fill="url(#accent)"/>
+<text class="focus-en" x="71" y="3512" >AI-Driven Software Engineering &amp;</text>
+<text class="focus-en" x="71" y="3534" >Open-Source Building</text>
+<text class="focus-zh" x="71" y="3568" >AI 驱动的软件工程与开源构建</text>
   </g>
-  <rect x=".5" y=".5" width="389" height="3572" rx="15.5" fill="none" stroke="#29434c"/>
+  <rect x=".5" y=".5" width="389" height="3633" rx="15.5" fill="none" stroke="#29434c"/>
 </svg>

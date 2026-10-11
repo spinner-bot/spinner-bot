@@ -171,6 +171,7 @@ def shell(width: int, height: int, mobile: bool, content: str) -> str:
       .body-en { fill: #b7cacc; font-size: BODY_EN_SIZEpx; }
       .body-zh { fill: #b7cacc; font-size: BODY_ZH_SIZEpx; }
       .year { fill: #e8fffa; font-size: YEAR_SIZEpx; font-weight: 760; letter-spacing: .09em; }
+      .timeline-heading { fill: #effffc; font-size: TIMELINE_HEADING_SIZEpx; font-weight: 750; letter-spacing: .015em; }
       .focus-heading { fill: #effffc; font-size: FOCUS_HEADING_SIZEpx; font-weight: 760; letter-spacing: .02em; }
       .focus-row { fill: #0b2029; stroke: #2a4850; stroke-width: 1; }
       .focus-en { fill: #e5f7f4; font-size: FOCUS_EN_SIZEpx; font-weight: 650; }
@@ -179,6 +180,7 @@ def shell(width: int, height: int, mobile: bool, content: str) -> str:
     sizes = (11, 15, 16, 14, 14, 14, 22, 19, 15, 14) if mobile else (13, 19, 19, 17, 17, 17, 26, 25, 20, 18)
     for key, size in zip(("DATE_SIZE", "TITLE_EN_SIZE", "TITLE_ZH_SIZE", "BODY_EN_SIZE", "BODY_ZH_SIZE", "YEAR_SIZE", "TRACK_SIZE", "FOCUS_HEADING_SIZE", "FOCUS_EN_SIZE", "FOCUS_ZH_SIZE"), sizes):
         styles = styles.replace(key, str(size))
+    styles = styles.replace("TIMELINE_HEADING_SIZE", "19" if mobile else "30")
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" role="img" aria-labelledby="timeline-desc">
   <title id="timeline-desc">Bilingual research timeline and current focus / 研究时间线与当前关注</title>
   {styles}
@@ -203,6 +205,18 @@ def year_marker(x: int, y: int, width: int = 110, mobile: bool = False) -> str:
     return "\n".join((
         f'<rect x="{x - width // 2}" y="{y - height // 2}" width="{width}" height="{height}" rx="{height // 2}" fill="#10313a" stroke="#9af5df" stroke-width="2"/>',
         text(x, y + 6, "2026", "year", 'text-anchor="middle"'),
+    ))
+
+
+def timeline_heading(mobile: bool) -> str:
+    center = 195 if mobile else 600
+    baseline = 51 if mobile else 71
+    underline_y = 68 if mobile else 91
+    half_width = 56 if mobile else 100
+    return "\n".join((
+        text(center, baseline, "My Adventure in AI & CS", "timeline-heading", 'text-anchor="middle"'),
+        f'<path d="M{center - half_width} {underline_y}H{center + half_width}" stroke="#31535b" stroke-width="1"/>',
+        f'<path d="M{center - 27} {underline_y}H{center + 27}" stroke="url(#accent)" stroke-width="2"/>',
     ))
 
 
@@ -259,7 +273,7 @@ def focus_section(start_y: int, mobile: bool) -> tuple[str, int]:
 def desktop() -> str:
     card_x, card_width = 112, 976
     left_track, right_track = 56, 1144
-    first_y = 68
+    first_y = 133
     first, first_height = card(EVENTS[0], card_x, first_y, card_width, False)
     crossing_y = first_y + first_height + 76
     pieces = [first]
@@ -274,7 +288,7 @@ def desktop() -> str:
     tip_y = tail_start + 556
     focus_drawing, total_height = focus_section(tail_start + 692, False)
     route = (
-        f"M{left_track} 28V{crossing_y - 120} Q{left_track} {crossing_y} 176 {crossing_y} "
+        f"M{left_track} 103V{crossing_y - 120} Q{left_track} {crossing_y} 176 {crossing_y} "
         f"H1024 Q{right_track} {crossing_y} {right_track} {crossing_y + 120} "
         f"V{tail_start} Q{right_track} {tail_start + 90} 1066 {tail_start + 135} "
         f"L678 {tail_start + 359} Q600 {tail_start + 404} 600 {tail_start + 494} V{tip_y}"
@@ -287,14 +301,14 @@ def desktop() -> str:
             f'<circle class="node-ring" cx="{node_x}" cy="{node_y}" r="19"/>',
             f'<circle class="node-core" cx="{node_x}" cy="{node_y}" r="6"/>',
         ))
-    content = "\n".join(tracks + pieces + [year_marker(600, crossing_y, 96), ellipsis(600, tip_y, False), focus_drawing])
+    content = "\n".join([timeline_heading(False)] + tracks + pieces + [year_marker(600, crossing_y, 96), ellipsis(600, tip_y, False), focus_drawing])
     return shell(1200, total_height, False, content)
 
 
 def mobile() -> str:
     card_x, card_width = 54, 282
     left_track, right_track = 27, 363
-    current_y = 44
+    current_y = 105
     pieces = []
     nodes = []
     crossing_y = 0
@@ -310,7 +324,7 @@ def mobile() -> str:
     tip_y = tail_start + 274
     focus_drawing, total_height = focus_section(tail_start + 380, True)
     route = (
-        f"M{left_track} 24V{crossing_y - 70} Q{left_track} {crossing_y} 97 {crossing_y} "
+        f"M{left_track} 79V{crossing_y - 70} Q{left_track} {crossing_y} 97 {crossing_y} "
         f"H293 Q{right_track} {crossing_y} {right_track} {crossing_y + 70} "
         f"V{tail_start} Q{right_track} {tail_start + 58} 315 {tail_start + 86} "
         f"L243 {tail_start + 128} Q195 {tail_start + 156} 195 {tail_start + 214} V{tip_y}"
@@ -323,7 +337,7 @@ def mobile() -> str:
             f'<circle class="node-ring" cx="{node_x}" cy="{node_y}" r="16"/>',
             f'<circle class="node-core" cx="{node_x}" cy="{node_y}" r="5"/>',
         ))
-    content = "\n".join(tracks + pieces + [year_marker(195, crossing_y, 88, True), ellipsis(195, tip_y, True), focus_drawing])
+    content = "\n".join([timeline_heading(True)] + tracks + pieces + [year_marker(195, crossing_y, 88, True), ellipsis(195, tip_y, True), focus_drawing])
     return shell(390, total_height, True, content)
 
 
