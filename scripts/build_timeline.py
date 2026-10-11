@@ -210,7 +210,7 @@ def year_marker(x: int, y: int, width: int = 110, mobile: bool = False) -> str:
 
 def timeline_heading(mobile: bool) -> str:
     track_x = 27 if mobile else 56
-    title_x = 54 if mobile else 112
+    title_x = 75 if mobile else 139
     node_y = 51 if mobile else 66
     baseline = 58 if mobile else 78
     underline_y = 76 if mobile else 100

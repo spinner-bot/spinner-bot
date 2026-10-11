@@ -48,13 +48,13 @@
 <circle class="node-halo" cx="363" cy="2034" r="20"/>
 <circle class="node-ring" cx="363" cy="2034" r="16"/>
 <circle class="node-core" cx="363" cy="2034" r="5"/>
-<path d="M39 51H47" stroke="url(#accent)" stroke-width="2" stroke-linecap="round"/>
+<path d="M39 51H68" stroke="url(#accent)" stroke-width="2" stroke-linecap="round"/>
 <circle class="node-halo" cx="27" cy="51" r="17"/>
 <circle class="node-ring" cx="27" cy="51" r="12"/>
 <circle class="node-core" cx="27" cy="51" r="4"/>
-<text class="timeline-heading" x="54" y="58" >My Adventure in AI &amp; CS</text>
-<path d="M54 76H286" stroke="#31535b" stroke-width="1"/>
-<path d="M54 76H94" stroke="url(#accent)" stroke-width="2"/>
+<text class="timeline-heading" x="75" y="58" >My Adventure in AI &amp; CS</text>
+<path d="M75 76H307" stroke="#31535b" stroke-width="1"/>
+<path d="M75 76H115" stroke="url(#accent)" stroke-width="2"/>
 <rect class="panel" x="54" y="105" width="282" height="511" rx="16"/>
 <rect x="75" y="129" width="3" height="20" rx="1.5" fill="url(#accent)"/>
 <text class="date" x="89" y="142" >AUTUMN 2025</text>
