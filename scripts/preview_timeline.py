@@ -17,9 +17,9 @@ def main() -> None:
         try:
             page = browser.new_page(viewport={"width": 1248, "height": 900}, device_scale_factor=1)
             page.goto(PAGE.as_uri())
-            page.locator("picture img").screenshot(path=str(PREVIEWS / "timeline-desktop-v4.png"))
+            page.locator("picture img").screenshot(path=str(PREVIEWS / "timeline-desktop-v5.png"))
             page.set_viewport_size({"width": 390, "height": 900})
-            page.locator("picture img").screenshot(path=str(PREVIEWS / "timeline-mobile-v4.png"))
+            page.locator("picture img").screenshot(path=str(PREVIEWS / "timeline-mobile-v5.png"))
         finally:
             browser.close()
 

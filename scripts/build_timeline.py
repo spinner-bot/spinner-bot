@@ -209,14 +209,22 @@ def year_marker(x: int, y: int, width: int = 110, mobile: bool = False) -> str:
 
 
 def timeline_heading(mobile: bool) -> str:
-    center = 195 if mobile else 600
-    baseline = 51 if mobile else 71
-    underline_y = 68 if mobile else 91
-    half_width = 56 if mobile else 100
+    track_x = 27 if mobile else 56
+    title_x = 54 if mobile else 112
+    node_y = 51 if mobile else 66
+    baseline = 58 if mobile else 78
+    underline_y = 76 if mobile else 100
+    title_width = 232 if mobile else 365
+    halo_radius = 17 if mobile else 25
+    ring_radius = 12 if mobile else 17
     return "\n".join((
-        text(center, baseline, "My Adventure in AI & CS", "timeline-heading", 'text-anchor="middle"'),
-        f'<path d="M{center - half_width} {underline_y}H{center + half_width}" stroke="#31535b" stroke-width="1"/>',
-        f'<path d="M{center - 27} {underline_y}H{center + 27}" stroke="url(#accent)" stroke-width="2"/>',
+        f'<path d="M{track_x + ring_radius} {node_y}H{title_x - 7}" stroke="url(#accent)" stroke-width="2" stroke-linecap="round"/>',
+        f'<circle class="node-halo" cx="{track_x}" cy="{node_y}" r="{halo_radius}"/>',
+        f'<circle class="node-ring" cx="{track_x}" cy="{node_y}" r="{ring_radius}"/>',
+        f'<circle class="node-core" cx="{track_x}" cy="{node_y}" r="{4 if mobile else 5}"/>',
+        text(title_x, baseline, "My Adventure in AI & CS", "timeline-heading"),
+        f'<path d="M{title_x} {underline_y}H{title_x + title_width}" stroke="#31535b" stroke-width="1"/>',
+        f'<path d="M{title_x} {underline_y}H{title_x + (40 if mobile else 58)}" stroke="url(#accent)" stroke-width="2"/>',
     ))
 
 
@@ -288,7 +296,7 @@ def desktop() -> str:
     tip_y = tail_start + 556
     focus_drawing, total_height = focus_section(tail_start + 692, False)
     route = (
-        f"M{left_track} 103V{crossing_y - 120} Q{left_track} {crossing_y} 176 {crossing_y} "
+        f"M{left_track} 66V{crossing_y - 120} Q{left_track} {crossing_y} 176 {crossing_y} "
         f"H1024 Q{right_track} {crossing_y} {right_track} {crossing_y + 120} "
         f"V{tail_start} Q{right_track} {tail_start + 90} 1066 {tail_start + 135} "
         f"L678 {tail_start + 359} Q600 {tail_start + 404} 600 {tail_start + 494} V{tip_y}"
@@ -301,7 +309,7 @@ def desktop() -> str:
             f'<circle class="node-ring" cx="{node_x}" cy="{node_y}" r="19"/>',
             f'<circle class="node-core" cx="{node_x}" cy="{node_y}" r="6"/>',
         ))
-    content = "\n".join([timeline_heading(False)] + tracks + pieces + [year_marker(600, crossing_y, 96), ellipsis(600, tip_y, False), focus_drawing])
+    content = "\n".join(tracks + [timeline_heading(False)] + pieces + [year_marker(600, crossing_y, 96), ellipsis(600, tip_y, False), focus_drawing])
     return shell(1200, total_height, False, content)
 
 
@@ -324,7 +332,7 @@ def mobile() -> str:
     tip_y = tail_start + 274
     focus_drawing, total_height = focus_section(tail_start + 380, True)
     route = (
-        f"M{left_track} 79V{crossing_y - 70} Q{left_track} {crossing_y} 97 {crossing_y} "
+        f"M{left_track} 51V{crossing_y - 70} Q{left_track} {crossing_y} 97 {crossing_y} "
         f"H293 Q{right_track} {crossing_y} {right_track} {crossing_y + 70} "
         f"V{tail_start} Q{right_track} {tail_start + 58} 315 {tail_start + 86} "
         f"L243 {tail_start + 128} Q195 {tail_start + 156} 195 {tail_start + 214} V{tip_y}"
@@ -337,7 +345,7 @@ def mobile() -> str:
             f'<circle class="node-ring" cx="{node_x}" cy="{node_y}" r="16"/>',
             f'<circle class="node-core" cx="{node_x}" cy="{node_y}" r="5"/>',
         ))
-    content = "\n".join([timeline_heading(True)] + tracks + pieces + [year_marker(195, crossing_y, 88, True), ellipsis(195, tip_y, True), focus_drawing])
+    content = "\n".join(tracks + [timeline_heading(True)] + pieces + [year_marker(195, crossing_y, 88, True), ellipsis(195, tip_y, True), focus_drawing])
     return shell(390, total_height, True, content)
 
 

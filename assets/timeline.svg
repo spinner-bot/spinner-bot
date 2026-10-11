@@ -30,11 +30,8 @@
   <g clip-path="url(#clip)">
     <rect width="1200" height="3107" fill="url(#background)"/>
     <rect width="1200" height="3107" fill="url(#grid)" opacity=".25"/>
-    <text class="timeline-heading" x="600" y="71" text-anchor="middle">My Adventure in AI &amp; CS</text>
-<path d="M500 91H700" stroke="#31535b" stroke-width="1"/>
-<path d="M573 91H627" stroke="url(#accent)" stroke-width="2"/>
-<path class="track" d="M56 103V437 Q56 557 176 557 H1024 Q1144 557 1144 677 V1848 Q1144 1938 1066 1983 L678 2207 Q600 2252 600 2342 V2404"/>
-<path class="track-core" d="M56 103V437 Q56 557 176 557 H1024 Q1144 557 1144 677 V1848 Q1144 1938 1066 1983 L678 2207 Q600 2252 600 2342 V2404"/>
+    <path class="track" d="M56 66V437 Q56 557 176 557 H1024 Q1144 557 1144 677 V1848 Q1144 1938 1066 1983 L678 2207 Q600 2252 600 2342 V2404"/>
+<path class="track-core" d="M56 66V437 Q56 557 176 557 H1024 Q1144 557 1144 677 V1848 Q1144 1938 1066 1983 L678 2207 Q600 2252 600 2342 V2404"/>
 <path class="hairline" d="M56 171H112"/>
 <circle class="node-halo" cx="56" cy="171" r="26"/>
 <circle class="node-ring" cx="56" cy="171" r="19"/>
@@ -51,6 +48,13 @@
 <circle class="node-halo" cx="1144" cy="1483" r="26"/>
 <circle class="node-ring" cx="1144" cy="1483" r="19"/>
 <circle class="node-core" cx="1144" cy="1483" r="6"/>
+<path d="M73 66H105" stroke="url(#accent)" stroke-width="2" stroke-linecap="round"/>
+<circle class="node-halo" cx="56" cy="66" r="25"/>
+<circle class="node-ring" cx="56" cy="66" r="17"/>
+<circle class="node-core" cx="56" cy="66" r="5"/>
+<text class="timeline-heading" x="112" y="78" >My Adventure in AI &amp; CS</text>
+<path d="M112 100H477" stroke="#31535b" stroke-width="1"/>
+<path d="M112 100H170" stroke="url(#accent)" stroke-width="2"/>
 <rect class="panel" x="112" y="133" width="976" height="348" rx="16"/>
 <rect x="139" y="157" width="3" height="20" rx="1.5" fill="url(#accent)"/>
 <text class="date" x="153" y="176" >AUTUMN 2025</text>
