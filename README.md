@@ -7,18 +7,14 @@
 <br/>
 
 <!-- ═══════════ SNAKE ANIMATION ═══════════ -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/spinner-bot/spinner-bot/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/spinner-bot/spinner-bot/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/spinner-bot/spinner-bot/output/github-contribution-grid-snake.svg">
-</picture>
+<img alt="GitHub contribution grid snake animation" src="https://raw.githubusercontent.com/spinner-bot/spinner-bot/output/github-contribution-grid-snake-dark.svg" width="100%">
 
 <br/>
 </div>
 
 <picture>
   <source media="(max-width: 640px)" srcset="assets/about-me-mobile.svg">
-  <img src="assets/about-me.svg" alt="ABOUT ME | 关于我. An undergraduate student in Intelligent Science and Technology at Hohai University. My work centers on machine learning and multimodal intelligence, extending into software engineering. I explore model capabilities, learning mechanisms, and methodological transfer—from understanding and reproducing methods to empirical validation and system building. 河海大学智能科学与技术专业本科生。以机器学习与多模态智能为研究主线，以软件工程为实践延伸，持续探索模型能力、学习机制与方法迁移。从理论理解、方法复现到实验验证与系统构建，致力于将技术洞察转化为可验证的研究与可运行的系统。" width="100%" />
+  <img src="assets/about-me.svg" alt="ABOUT ME 关于我. An undergraduate student in Intelligent Science and Technology at Hohai University. My work centers on machine learning and multimodal intelligence, extending into software engineering. I explore model capabilities, learning mechanisms, and methodological transfer—from understanding and reproducing methods to empirical validation and system building. 河海大学智能科学与技术专业本科生。以机器学习与多模态智能为研究主线，以软件工程为实践延伸，持续探索模型能力、学习机制与方法迁移。从理论理解、方法复现到实验验证与系统构建，致力于将技术洞察转化为可验证的研究与可运行的系统。" width="100%" />
 </picture>
 
 <!-- Temporarily hidden; preserved for later reuse.

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 710" width="390" height="710" role="img" aria-labelledby="about-mobile-title about-mobile-desc">
-  <title id="about-mobile-title">ABOUT ME | 关于我</title>
+  <title id="about-mobile-title">ABOUT ME 关于我</title>
   <desc id="about-mobile-desc">English profile first, followed by the Chinese translation.</desc>
   <style>
     :root {
@@ -41,12 +41,11 @@
 
     <rect x="24" y="25" width="2.5" height="21" rx="1.25" fill="url(#accent-mobile)"/>
     <text class="title" x="37" y="42">ABOUT ME</text>
-    <text class="title" x="136" y="42" fill="var(--mint)">|</text>
-    <text class="title" x="150" y="42">关于我</text>
+    <text class="title" x="144" y="42">关于我</text>
     <path d="M24 61H366" stroke="var(--line)" stroke-width="1"/>
     <path d="M24 61H83" stroke="url(#accent-mobile)" stroke-width="2"/>
 
-    <text class="section-no" x="24" y="99">01 / PROFILE</text>
+    <text class="section-no" x="24" y="99">PROFILE</text>
     <circle cx="24" cy="115" r="2" fill="var(--mint)"/>
     <path d="M32 115H366" stroke="var(--line)" stroke-width="1"/>
     <text class="body" x="24" y="151">
@@ -64,7 +63,7 @@
     <path d="M24 392H366" stroke="var(--line)" stroke-width="1"/>
     <path d="M24 392H83" stroke="url(#accent-mobile)" stroke-width="2"/>
     <circle cx="24" cy="392" r="2" fill="var(--mint)"/>
-    <text class="section-no" x="24" y="430">02 / 个人简介</text>
+    <text class="section-no" x="24" y="430">个人简介</text>
     <circle cx="24" cy="446" r="2" fill="var(--mint)"/>
     <path d="M32 446H366" stroke="var(--line)" stroke-width="1"/>
     <text class="body" x="24" y="482">

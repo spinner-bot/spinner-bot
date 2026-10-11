@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-labelledby="about-title about-desc">
-  <title id="about-title">ABOUT ME | 关于我</title>
+  <title id="about-title">ABOUT ME 关于我</title>
   <desc id="about-desc">English and Chinese profile in two columns. The English paragraph is on the left; the Chinese translation is on the right.</desc>
   <style>
     :root {
@@ -54,16 +54,15 @@
 
     <rect x="76" y="48" width="3" height="27" rx="1.5" fill="url(#accent)"/>
     <text class="title" x="94" y="69">ABOUT ME</text>
-    <text class="title" x="230" y="69" fill="var(--mint)">|</text>
-    <text class="title" x="250" y="69">关于我</text>
+    <text class="title" x="230" y="69">关于我</text>
     <path d="M76 94H1124" stroke="var(--line)" stroke-width="1"/>
     <path d="M76 94H178" stroke="url(#accent)" stroke-width="2"/>
 
-    <text class="section-no" x="76" y="137">01 / PROFILE</text>
+    <text class="section-no" x="76" y="137">PROFILE</text>
     <circle cx="76" cy="158" r="2.5" fill="var(--mint)"/>
     <path d="M84 158H562" stroke="var(--line)" stroke-width="1"/>
 
-    <text class="section-no" x="638" y="137">02 / 个人简介</text>
+    <text class="section-no" x="638" y="137">个人简介</text>
     <circle cx="638" cy="158" r="2.5" fill="var(--mint)"/>
     <path d="M646 158H1124" stroke="var(--line)" stroke-width="1"/>
 
