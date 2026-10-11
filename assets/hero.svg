@@ -102,13 +102,13 @@
 
     <!-- Each language has its own positions, and all three regions switch together. -->
     <g class="copy-en">
-      <text class="eyebrow" x="76" y="72">DIGITAL IDENTITY · PERSONAL PORTFOLIO</text>
+      <text class="eyebrow" x="76" y="72">DIGITAL IDENTITY | PERSONAL PORTFOLIO</text>
       <text class="name" x="76" y="205">ZHANG RUIHAN</text>
       <text class="statement" x="76" y="310">Exploring more possibilities in the AI era.</text>
       <text class="footer-copy" x="76" y="395">KNOWLEDGE · RESEARCH · DEVELOPMENT</text>
     </g>
     <g class="copy-zh">
-      <text class="eyebrow eyebrow-zh" x="76" y="72">数字身份 · 个人作品集</text>
+      <text class="eyebrow eyebrow-zh" x="76" y="72">数字身份 | 个人作品集</text>
       <text class="name name-zh" x="76" y="205">张锐寒</text>
       <text class="statement statement-zh" x="76" y="310">探索 AI 时代的更多可能</text>
       <text class="footer-copy footer-zh" x="76" y="395">知识 · 研究 · 开发</text>

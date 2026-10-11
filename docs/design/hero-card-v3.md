@@ -6,7 +6,7 @@
 
 | 区域 | 英文状态 | 中文状态 |
 | --- | --- | --- |
-| 顶部标签 | DIGITAL IDENTITY · PERSONAL PORTFOLIO | 数字身份 · 个人作品集 |
+| 顶部标签 | DIGITAL IDENTITY &#124; PERSONAL PORTFOLIO | 数字身份 &#124; 个人作品集 |
 | 中部身份 | ZHANG RUIHAN / spinner-bot | 张锐寒 / spinner-bot |
 | 一句话 | Exploring more possibilities in the AI era. | 探索 AI 时代的更多可能 |
 | 底部关键词 | KNOWLEDGE · RESEARCH · DEVELOPMENT | 知识 · 研究 · 开发 |
