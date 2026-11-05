@@ -1,12 +1,12 @@
 # 自我介绍 / Self-Introduction
 
-**ZHANG RUIHAN / 张锐寒 · spinner-bot（浪兮）**
+**ZHANG RUIHAN / 张锐寒**
 
 ---
 
 ## 中文
 
-我是张锐寒，网名 spinner-bot，也常用"浪兮"这个名字。我目前就读于河海大学人工智能与自动化学院，主修智能科学与技术，同时是河海大学数智治域实验室（DIG Lab）和 2025 URT 本科生科研团队的成员。我生活在南京，日常的大部分时间都花在两件事上：理解智能系统究竟是如何学习的，以及动手构建能帮助我回答这个问题的东西。
+我是张锐寒。我目前就读于河海大学人工智能与自动化学院，主修智能科学与技术，同时是河海大学数智治域实验室（DIG Lab）和 2025 URT 本科生科研团队的成员。我生活在南京，日常的大部分时间都花在两件事上：理解智能系统究竟是如何学习的，以及动手构建能帮助我回答这个问题的东西。
 
 我的研究主线是机器学习与多模态智能，并延伸至软件工程。具体而言，我关心模型如何获得、迁移与保持能力，关注多模态场景下策略蒸馏的作用，也对表格学习和模型架构本身的设计保持好奇。我的方法是从理解出发：先读懂一个问题，再复现已有方法，然后通过实验去验证、质疑和修正，最后把结论沉淀为可以运行的系统。对我而言，理解一篇论文并不等于掌握它，只有当我能亲手把它实现出来、并看到它在实验中成立或失败时，才算真正走近它。
 
@@ -24,7 +24,7 @@
 
 ## English
 
-I'm Zhang Ruihan, known online as spinner-bot or "浪兮" (Langxi). I'm an undergraduate in Intelligent Science and Technology at Hohai University's School of Artificial Intelligence and Automation, and a member of the HHU Data Intelligence & Governance Lab (DIG Lab) and the 2025 URT undergraduate research team. Based in Nanjing, I spend most of my time on two things: understanding how intelligent systems learn, and building the things that help me answer that question.
+I'm Zhang Ruihan. I'm an undergraduate in Intelligent Science and Technology at Hohai University's School of Artificial Intelligence and Automation, and a member of the HHU Data Intelligence & Governance Lab (DIG Lab) and the 2025 URT undergraduate research team. Based in Nanjing, I spend most of my time on two things: understanding how intelligent systems learn, and building the things that help me answer that question.
 
 My research centers on machine learning and multimodal intelligence, extending into software engineering. More specifically, I care about how models acquire, transfer, and retain capabilities, about the role of policy distillation in multimodal settings, and about tabular learning and the design of model architectures themselves. My approach starts from understanding: read a problem carefully, reproduce existing methods, then use experiments to validate, question, and revise them, and finally turn the conclusions into systems that actually run. To me, understanding a paper is not the same as mastering it—only when I have implemented it myself and watched it succeed or fail in an experiment do I feel I have truly come close to it.
 
