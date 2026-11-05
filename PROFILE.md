@@ -1,178 +1,39 @@
-# ZHANG RUIHAN / 张锐寒 · spinner-bot
+# 自我介绍 / Self-Introduction
 
-> Digital Identity | Personal Portfolio · 数字身份 | 个人作品集
->
-> Exploring more possibilities in the AI era. · 探索 AI 时代的更多可能。
->
-> Knowledge · Research · Development · 知识 · 研究 · 开发
+**ZHANG RUIHAN / 张锐寒 · spinner-bot（浪兮）**
 
 ---
 
-## At a Glance / 概况
+## 中文
 
-| | |
-| --- | --- |
-| Name / 姓名 | Zhang Ruihan / 张锐寒 |
-| Nickname / 昵称 | spinner-bot / 浪兮 |
-| Affiliation / 单位 | Hohai University · School of AI & Automation / 河海大学·人工智能与自动化学院 |
-| Major / 专业 | Intelligent Science and Technology / 智能科学与技术 |
-| Enrolled / 入学 | September 2025 / 2025 年 9 月 |
-| Lab / 实验室 | HHU Data Intelligence & Governance Lab (DIG Lab) / 河海大学数智治域实验室 |
-| Research Team / 科研团队 | 2025 URT Undergraduate Research Team / 2025 URT 本科生科研团队 |
-| Location / 位置 | Nanjing, Jiangsu, China / 中国·江苏·南京 |
-| GitHub | [github.com/spinner-bot](https://github.com/spinner-bot) |
+我是张锐寒，网名 spinner-bot，也常用"浪兮"这个名字。我目前就读于河海大学人工智能与自动化学院，主修智能科学与技术，同时是河海大学数智治域实验室（DIG Lab）和 2025 URT 本科生科研团队的成员。我生活在南京，日常的大部分时间都花在两件事上：理解智能系统究竟是如何学习的，以及动手构建能帮助我回答这个问题的东西。
 
----
+我的研究主线是机器学习与多模态智能，并延伸至软件工程。具体而言，我关心模型如何获得、迁移与保持能力，关注多模态场景下策略蒸馏的作用，也对表格学习和模型架构本身的设计保持好奇。我的方法是从理解出发：先读懂一个问题，再复现已有方法，然后通过实验去验证、质疑和修正，最后把结论沉淀为可以运行的系统。对我而言，理解一篇论文并不等于掌握它，只有当我能亲手把它实现出来、并看到它在实验中成立或失败时，才算真正走近它。
 
-## Introduction / 自我介绍
+这条路径是由一次次具体的实践铺出来的。2025 年秋天，我从编程基础与最初的工程构建起步；2026 年春天，我开始系统地学习机器学习并参与研究实践；到了夏天，我的注意力转向多模态智能与策略蒸馏；如今，我正深入模型架构本身，同时向前沿方向张望。每一个阶段都让我更清楚地意识到：研究不是被动地吸收结论，而是持续地提出问题、设计实验、承担不确定性。
 
-I am an undergraduate student in Intelligent Science and Technology at Hohai University. My work centers on machine learning and multimodal intelligence, extending into software engineering. I explore model capabilities, learning mechanisms, and methodological transfer—from understanding and reproducing methods to empirical validation and system building. Alongside research, I enjoy turning ideas into working software: algorithms, tools, games, and visualizations. I believe that technical insight becomes meaningful only when it can be validated by experiment and carried by a running system.
+研究之外，我同样享受把想法变成真正可用的软件。我维护着一个持续更新的 AI 学习仓库，记录 NLP、CV 与前沿方法的实现与笔记；我做过 AI 辅助的水动力建模与仿真，也用一个概念系统去检验那些"看起来很漂亮"的算法是否真的成立。我也写工具——效率工具、SSH 自动化、思维导图生成器——因为生活里那些不够顺手的地方，往往正是最好的练习题目。我还做游戏和可视化：一个多玩法、高自由度的 3D 开放世界沙盒，一个用代码呈现数学之美的项目，以及一款我十岁左右就设计好、直到今天才终于有能力实现的游戏。这些项目看似分散,但对我而言它们共享同一种乐趣——把抽象的想法一点点变成能被看见、被操作的东西。
 
-我是河海大学智能科学与技术专业本科生。以机器学习与多模态智能为研究主线，以软件工程为实践延伸，持续探索模型能力、学习机制与方法迁移。从理论理解、方法复现到实验验证与系统构建，致力于将技术洞察转化为可验证的研究与可运行的系统。在研究之外，我也喜欢把想法做成真正能跑起来的东西——算法、工具、游戏与可视化。我相信技术洞察只有经过实验验证、并由可运行的系统承载，才真正产生价值。
+在技术上，Python 是我的主力语言，也熟悉 C、C++ 和 HTML，正在学习 Java。我常用 PyTorch、scikit-learn、OpenCV 和 Hugging Face 做实验，习惯在 Git、Docker、Linux 和 VS Code 构成的日常环境里工作。比起罗列工具，我更看重它们背后共同的能力：拆解问题、快速验证、持续迭代。
+
+我仍然处在学习的早期阶段，但方向是清晰的：我希望在机器学习与多模态智能上做出扎实、可验证的工作，同时保持工程上的手感，让研究不止停留在纸面。我相信技术洞察只有经过实验检验、并由真实的系统承载，才会产生真正的价值。我也乐于把这些过程公开在 GitHub 上，与同样对 AI 和计算机科学感兴趣的人交流、协作，一起把下一步的可能性构建出来。
+
+如果你有想法、问题，或者一个正在酝酿的项目，欢迎随时联系我。
 
 ---
 
-## About Me / 关于我
+## English
 
-My work spans knowledge, research, and development. On the research side, I focus on how models acquire, transfer, and retain capabilities, and on the mechanisms behind learning. On the engineering side, I build the systems that make those questions testable—data pipelines, training experiments, and interactive applications. I am currently a member of the DIG Lab and the 2025 URT undergraduate research team.
+I'm Zhang Ruihan, known online as spinner-bot or "浪兮" (Langxi). I'm an undergraduate in Intelligent Science and Technology at Hohai University's School of Artificial Intelligence and Automation, and a member of the HHU Data Intelligence & Governance Lab (DIG Lab) and the 2025 URT undergraduate research team. Based in Nanjing, I spend most of my time on two things: understanding how intelligent systems learn, and building the things that help me answer that question.
 
-我的工作横跨知识、研究、开发三个层面。研究上，关注模型如何获得、迁移与保持能力，以及学习行为背后的机制；工程上，构建让这些问题可被检验的系统——数据流程、训练实验与交互应用。目前是 DIG Lab 与 2025 URT 本科生科研团队的成员。
+My research centers on machine learning and multimodal intelligence, extending into software engineering. More specifically, I care about how models acquire, transfer, and retain capabilities, about the role of policy distillation in multimodal settings, and about tabular learning and the design of model architectures themselves. My approach starts from understanding: read a problem carefully, reproduce existing methods, then use experiments to validate, question, and revise them, and finally turn the conclusions into systems that actually run. To me, understanding a paper is not the same as mastering it—only when I have implemented it myself and watched it succeed or fail in an experiment do I feel I have truly come close to it.
 
----
+This path has been built one concrete step at a time. In the autumn of 2025 I began with programming foundations and my first builds; in the spring of 2026 I started studying machine learning systematically and taking part in research practice; by the summer my attention had turned to multimodal intelligence and policy distillation; and now I am going deeper into model architectures while keeping an eye on emerging directions. Each stage has made one thing clearer: research is not the passive absorption of conclusions, but the continuous work of asking questions, designing experiments, and living with uncertainty.
 
-## Education / 教育经历
+Beyond research, I enjoy turning ideas into software that actually works. I maintain an ever-growing AI repository of implementations and notes on NLP, CV, and frontier methods; I have worked on AI-assisted hydrodynamic modeling and simulation, and built a concept system to test whether "beautiful-looking" algorithms actually hold up. I also write tools—productivity utilities, SSH automation, a mind-map generator—because the rough edges of everyday life tend to make the best practice problems. And I make games and visualizations: a 3D open-world sandbox with multiple gameplay modes and a high degree of freedom, a project that renders the beauty of mathematics in code, and a game I designed around the age of ten and only now have the ability to bring to life. These projects may look scattered, but they share the same pleasure for me—turning an abstract idea, piece by piece, into something that can be seen and touched.
 
-**Hohai University · School of Artificial Intelligence & Automation**  
-B.Eng. student in Intelligent Science and Technology, enrolled September 2025.  
-Member of the HHU Data Intelligence & Governance Lab (DIG Lab) and the 2025 URT Undergraduate Research Team.
+Technically, Python is my primary language, and I am comfortable with C, C++, and HTML while learning Java. I work with PyTorch, scikit-learn, OpenCV, and Hugging Face for experiments, in a daily environment built on Git, Docker, Linux, and VS Code. More than the list of tools, I value the shared ability behind them: breaking problems down, validating quickly, and iterating continuously.
 
-**河海大学·人工智能与自动化学院**  
-智能科学与技术专业本科生，2025 年 9 月入学。  
-河海大学数智治域实验室（DIG Lab）、2025 URT 本科生科研团队成员。
+I am still early in my learning, but the direction is clear: I want to do solid, verifiable work in machine learning and multimodal intelligence, while keeping the engineering instinct that keeps research from staying on paper. I believe technical insight becomes valuable only when it has been tested by experiment and carried by a real system. I also enjoy keeping this process public on GitHub—exchanging ideas and collaborating with people who share an interest in AI and computer science, and building the next possibilities together.
 
----
-
-## Research Journey / 研究时间线
-
-| Period | Milestone |
-| --- | --- |
-| Autumn 2025 | Programming Foundations & First Builds / 编程基础与工程起步 |
-| Spring 2026 | Machine Learning & Research Practice / 机器学习与研究实践 |
-| Summer 2026 | Multimodal Intelligence & Policy Distillation / 多模态智能与策略蒸馏 |
-| Autumn 2026 | Model Architectures & Emerging Directions / 模型架构与前沿探索 |
-
----
-
-## Current Focus / 当前关注
-
-- Multimodal Intelligence & Policy Distillation / 多模态智能与策略蒸馏
-- Tabular Learning & Model Architectures / 表格学习与模型架构
-- Model Capability Transfer & Learning Mechanisms / 模型能力迁移与学习机制
-- AI-Driven Software Engineering & Open-Source Building / AI 驱动的软件工程与开源构建
-
----
-
-## Research Interests / 研究方向
-
-- Machine learning and deep learning
-- Multimodal intelligence and multimodal OPD
-- Natural language processing and computer vision
-- Model capability transfer and learning mechanisms
-- Tabular learning and model architectures
-- AI-driven software engineering
-
-- 机器学习与深度学习
-- 多模态智能与多模态 OPD
-- 自然语言处理与计算机视觉
-- 模型能力迁移与学习机制
-- 表格学习与模型架构
-- AI 驱动的软件工程
-
----
-
-## Technical Stack / 技术栈
-
-**Languages / 语言**  
-Python (primary / 主力), C, C++, HTML; learning Java / 学习中：Java
-
-**AI & Data / 人工智能与数据**  
-PyTorch, scikit-learn, OpenCV, Hugging Face, pandas
-
-**Tools & Environment / 工具与环境**  
-Git, Docker, Linux, VS Code
-
-**Areas of Practice / 实践领域**  
-Machine learning experiments, NLP / CV implementations, game development, developer tools, mathematical visualization, automation.
-
-机器学习实验、NLP / CV 实现、游戏开发、开发者工具、数学可视化、自动化脚本。
-
----
-
-## Projects / 项目
-
-### AI & Research / 人工智能与研究
-
-| Repository | Language | Description |
-| --- | --- | --- |
-| [AI-lab-2nd-generation](https://github.com/spinner-bot/AI-lab-2nd-generation) | Python | Learning codes, implementations and notes for NLP, CV and cutting-edge AI technologies. / 面向 NLP、CV 与前沿 AI 技术的学习代码、实现与笔记。 |
-| [AI-lab](https://github.com/spinner-bot/AI-lab) | Python | Archived; migrated to AI-lab-2nd-generation. / 已归档，迁移至第二代仓库。 |
-| [tabular-learning-lab](https://github.com/spinner-bot/tabular-learning-lab) | HTML | Tabular learning laboratory. / 表格学习实验仓库。 |
-| [img2Russellvec](https://github.com/spinner-bot/img2Russellvec) | Python | Fork: an experiment measuring emotion in AI-based image emotion recognition another way. / 分支项目：用另一种方式度量 AI 图像情绪识别中的情绪。 |
-| [HydroAI-Flow](https://github.com/spinner-bot/HydroAI-Flow) | HTML | AI-assisted hydrodynamic modeling and simulation. / AI 辅助的水动力建模与仿真。 |
-| [Concept-UrbanChain](https://github.com/spinner-bot/Concept-UrbanChain) | Python | A concept system testing whether "fancy" algorithms actually work—a personal mathematical sandbox. / 概念系统，用算法沙盒检验数学是否真的成立。 |
-| [AIC-2026](https://github.com/spinner-bot/AIC-2026) | Python | Competition / challenge workspace. / 竞赛与挑战项目工作区。 |
-| [canal-delights](https://github.com/spinner-bot/canal-delights) | Python | Personal project repository. / 个人项目仓库。 |
-| [MobileIE-Neo](https://github.com/spinner-bot/MobileIE-Neo) | — | Personal project repository. / 个人项目仓库。 |
-| [CMSS-17](https://github.com/spinner-bot/CMSS-17) | — | Personal project repository. / 个人项目仓库。 |
-| [AcadCC-2027](https://github.com/spinner-bot/AcadCC-2027) | HTML | Acad.CC 2027, in preparation. / Acad.CC 2027 筹备中。 |
-| [zzlab-pre](https://github.com/spinner-bot/zzlab-pre) | HTML | Personal project repository. / 个人项目仓库。 |
-
-### Software & Tools / 软件与工具
-
-| Repository | Language | Description |
-| --- | --- | --- |
-| [EffiLife](https://github.com/spinner-bot/EffiLife) | Python | 浪兮效率，高效生活—an efficiency toolkit. / 效率工具集。 |
-| [auto-ssh](https://github.com/spinner-bot/auto-ssh) | Python | SSH automation. / SSH 自动化工具。 |
-| [plan-helper](https://github.com/spinner-bot/plan-helper) | Python | A planning assistant. / 计划助手。 |
-| [scan-master](https://github.com/spinner-bot/scan-master) | — | Helps recover your C:/ drive. / 用于恢复 C 盘数据的工具。 |
-| [mind-map](https://github.com/spinner-bot/mind-map) | C | Automatically generates mind-map files from thoughts—built to make things a little better. / 自动生成思维导图文件。 |
-
-### Games & Graphics / 游戏与图形
-
-| Repository | Language | Description |
-| --- | --- | --- |
-| [IllusionaryNook](https://github.com/spinner-bot/IllusionaryNook) | C++ | A 3D open-world sandbox game with multiple gameplay modes and a high degree of freedom. / 多玩法、高自由度的 3D 开放世界沙盒游戏。 |
-| [Pixel-Roamer](https://github.com/spinner-bot/Pixel-Roamer) | Python | A game designed 10 years ago, finally built now. / 十年前设计、如今终于实现的游戏。 |
-| [BouncingBall-SurvivalDash](https://github.com/spinner-bot/BouncingBall-SurvivalDash) | C++ | An introductory C++ game—easy to start, fun to experiment with. / C++ 入门游戏。 |
-| [sphere-dreamweave](https://github.com/spinner-bot/sphere-dreamweave) | C++ | Exploring the beauty of mathematics through code. / 用代码探索数学之美。 |
-
-### Foundations & Others / 基础与其他
-
-| Repository | Language | Description |
-| --- | --- | --- |
-| [fundamentals-forge](https://github.com/spinner-bot/fundamentals-forge) | HTML | My adventure in fundamentals. / 计算机基础学习记录。 |
-| [spinner-bot](https://github.com/spinner-bot/spinner-bot) | Python | GitHub profile repository. / GitHub 个人主页仓库。 |
-
----
-
-## GitHub Snapshot / 开源概况
-
-| | |
-| --- | --- |
-| Public repositories | 23 |
-| Followers | 25 |
-| Following | 23 |
-| Account created | March 2026 |
-| Profile | [github.com/spinner-bot](https://github.com/spinner-bot) |
-
-My repositories span AI/ML experiments, NLP and CV implementations, developer tools, automation, games, and mathematical visualization. I actively maintain and iterate on public projects and welcome collaboration, issues, and discussion.
-
-仓库覆盖 AI/ML 实验、NLP 与 CV 实现、开发者工具、自动化、游戏与数学可视化。持续维护和迭代公开项目，欢迎协作、提 issue 或交流讨论。
-
----
-
-## Let's Connect / 联系
-
-Have an idea, a question, or a project in mind? Let's exchange perspectives and build what's next.
-
-有想法、问题，或正在酝酿的项目吗？欢迎交流观点，一起构建下一步的可能。
+If you have an idea, a question, or a project in mind, I'd be glad to hear from you.
