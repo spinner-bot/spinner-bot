@@ -23,7 +23,14 @@ jobs:
       - name: Generate snake SVGs
         uses: Platane/snk/svg-only@v3
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # ⚠️ 必须做兜底。snk 内部写的是：
+          #   process.env.GITHUB_TOKEN ?? getInput("github_token")
+          # 若 SNK_TOKEN 不存在或已过期，表达式会解析成空字符串 ""，
+          # 而空字符串不会触发 ?? 回退 —— 动作会用空 token 请求 API，1 秒内失败。
+          # （2026-10-11 ~ 2026-11-19 的停更正是这个原因，详见
+          #   docs/ops/snake-contribution-graph.md）
+          # 有 PAT 时用它（可纳入私有仓库贡献），没有时退回内置 token。
+          GITHUB_TOKEN: ${{ secrets.SNK_TOKEN || secrets.GITHUB_TOKEN }}
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
