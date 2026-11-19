@@ -83,19 +83,39 @@ const githubToken = process.env.GITHUB_TOKEN ?? getInput("github_token");
 
 ## 6. 修复
 
-`.github/workflows/snake.yml` 做了两处改动：
+`.github/workflows/snake.yml` 最终改成**两段式**：优先统计私有贡献，失败再退回公开贡献。
 
-1. **token 取值加兜底**，PAT 有效时仍然优先使用（保留纳入私有贡献的能力），失效时自动退回内置 token：
+```yaml
+env:
+  SNK_TOKEN: ${{ secrets.SNK_TOKEN }}   # secrets 不能写在 if: 里，先提到 job 级
 
-   ```yaml
-   env:
-     GITHUB_TOKEN: ${{ secrets.SNK_TOKEN || secrets.GITHUB_TOKEN }}
-   ```
+steps:
+  # ① 配了 PAT 就用它：能统计到私有仓库的贡献
+  - name: Generate snake SVGs (with private contributions)
+    id: snake-private
+    if: env.SNK_TOKEN != ''
+    continue-on-error: true            # PAT 出问题也不能拖垮整条流水线
+    uses: Platane/snk/svg-only@v3
+    env:
+      GITHUB_TOKEN: ${{ secrets.SNK_TOKEN }}
+    with: ...
 
-2. **发布步骤改用 `crazy-max/ghaction-github-pages@v4`**，替换掉原来手写的
-   `git checkout --orphan output` + `git rm -rf .` + `git push --force` 脚本。
-   `--orphan` 与 `--force` 的组合本身比较脆弱，换成社区通用的发布动作更稳，
-   也少一次 `actions/checkout`。
+  # ② 上一步没成功（没配 / 过期 / 权限不足），用内置 token 重新生成
+  - name: Generate snake SVGs (public contributions only)
+    if: steps.snake-private.outcome != 'success'
+    uses: Platane/snk/svg-only@v3
+    with: ...
+```
+
+要点：
+
+- 用 `steps.<id>.outcome` 而不是 `conclusion`：`continue-on-error` 只改 `conclusion`，`outcome` 才是真实结果；
+- 第一步失败不会让 job 变成失败，两步都失败时发布步骤自然不会跑，Actions 页仍能看到红叉；
+- `env.SNK_TOKEN` 为空的判断放在 `if:`，因为 **secrets 不允许直接出现在 `if:` 条件里**。
+
+同时，**发布步骤改用 `crazy-max/ghaction-github-pages@v4`**，替换掉原来手写的
+`git checkout --orphan output` + `git rm -rf .` + `git push --force` 脚本。
+`--orphan` 与 `--force` 的组合本身比较脆弱，换成社区通用的发布动作更稳，也少一次 `actions/checkout`。
 
 提交记录（小步提交）：
 
@@ -103,6 +123,7 @@ const githubToken = process.env.GITHUB_TOKEN ?? getInput("github_token");
 - `62e51f6` test(snake): 临时加回 env GITHUB_TOKEN，验证是否为失败原因
 - `ba325a3` test(snake): 用内置 GITHUB_TOKEN 替换 SNK_TOKEN，进一步定位空值问题
 - `eb46405` fix(snake): SNK_TOKEN 缺失时回退到内置 token
+- `eeba14f` feat(snake): 优先统计私有贡献，PAT 不可用时自动回退到公开贡献
 
 ## 7. 验证
 
@@ -115,7 +136,8 @@ GitHub 的图片代理通常几分钟内刷新；若浏览器仍显示旧图，�
 ## 8. 后续建议
 
 1. **要不要恢复私有贡献**：如需包含私有仓库的贡献，到 Settings → Developer settings → Personal access tokens 重新生成一个带 `read:user` 的 PAT，
-   存成仓库 secret `SNK_TOKEN` 即可，**不需要改工作流**（兜底表达式会自动优先使用它）。
+   存成仓库 secret `SNK_TOKEN` 即可，**不需要改工作流**——下次运行会自动走第 ① 步；
+   PAT 哪天再失效，第 ② 步会兜住，图不会停更。
 2. **加失败告警**：定时任务静默失败是这次问题的最大教训。可考虑在失败时给工作流加一个通知步骤，或定期看一眼 Actions 页。
 3. **提交保持小步**：这次的诊断过程本身也是靠四次小提交 + 每次立即运行来实现的，比一次性大改更容易定位。
 
