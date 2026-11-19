@@ -19,18 +19,31 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
+    # if: 条件里不能直接引用 secrets，所以先提到 job 级环境变量再判断
+    env:
+      SNK_TOKEN: ${{ secrets.SNK_TOKEN }}
+
     steps:
-      - name: Generate snake SVGs
+      # ① 配了 PAT 就优先用它：能统计到私有仓库的贡献
+      - name: Generate snake SVGs (with private contributions)
+        id: snake-private
+        if: env.SNK_TOKEN != ''
+        continue-on-error: true
         uses: Platane/snk/svg-only@v3
         env:
-          # ⚠️ 必须做兜底。snk 内部写的是：
-          #   process.env.GITHUB_TOKEN ?? getInput("github_token")
-          # 若 SNK_TOKEN 不存在或已过期，表达式会解析成空字符串 ""，
-          # 而空字符串不会触发 ?? 回退 —— 动作会用空 token 请求 API，1 秒内失败。
-          # （2026-10-11 ~ 2026-11-19 的停更正是这个原因，详见
-          #   docs/ops/snake-contribution-graph.md）
-          # 有 PAT 时用它（可纳入私有仓库贡献），没有时退回内置 token。
-          GITHUB_TOKEN: ${{ secrets.SNK_TOKEN || secrets.GITHUB_TOKEN }}
+          # snk 内部是 process.env.GITHUB_TOKEN ?? getInput("github_token")，
+          # 空字符串不会触发 ?? 回退，所以这里绝不能塞空值进来。
+          GITHUB_TOKEN: ${{ secrets.SNK_TOKEN }}
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      # ② PAT 没配 / 过期 / 权限不足时，自动退回只统计公开贡献
+      - name: Generate snake SVGs (public contributions only)
+        if: steps.snake-private.outcome != 'success'
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
